@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Powered Motion Graphic — Jeeyoung Min</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+  <load src="/partials/header.html" />
+
+  <!-- PROJECT DETAIL -->
+  <main class="project-detail">
+
+    <!-- ── BACK LINK ── -->
+    <load src="/partials/back-link.html" />
+
+    <!-- ── HEADER V2: hero banner + overlaid title, meta below ── -->
+    <header class="project-detail__header--v2">
+
+      <!-- Hero banner with eyebrow + title at bottom-left -->
+      <div class="project-detail__hero-banner reveal">
+        <picture>
+          <source media="(max-width: 767px)" srcset="https://res.cloudinary.com/dluuq2twb/image/upload/v1771875916/ai-video_hero_mo_djfubn.jpg">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771875558/ai-video_hero_pc_guc6ve.jpg" alt="AI Powered Motion Graphic" class="project-detail__hero-banner-img">
+        </picture>
+        <div class="project-detail__hero-banner-overlay">
+          <p class="project-detail__eyebrow">AI-Driven Projects</p>
+          <h1 class="project-detail__title">AI Powered Motion Graphic</h1>
+        </div>
+      </div>
+
+      <!-- Meta row below the banner -->
+      <div class="project-detail__meta reveal reveal--delay-1">
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Role</span>
+          <span class="project-detail__meta-value">Lead UX/UI Designer</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Timeline</span>
+          <span class="project-detail__meta-value">2 weeks</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Tools</span>
+          <div class="project-detail__tool-stack">
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/openart.png" alt="" class="project-detail__tool-icon">OpenArt AI</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/sora.png" alt="" class="project-detail__tool-icon">Sora</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/elevenlabs.png" alt="" class="project-detail__tool-icon">ElevenLabs</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/Premiere Pro.png" alt="" class="project-detail__tool-icon">Premiere Pro</span>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- ── OVERVIEW ── -->
+    <section class="project-detail__overview">
+      <div class="project-detail__overview-body reveal">
+        <h2 class="project-detail__section-title">Overview</h2>
+        <p class="project-detail__body">
+          An app service introduction video designed to recruit retailers as business partners. AI was used selectively to support production efficiency and visual consistency, while all <strong>motion design and storytelling decisions were led by me.</strong>
+        </p>
+        <ul class="project-detail__callout-text__body">
+            <p><strong>AI-assisted components:</strong></p>
+            <li>Mascot character creation</li>
+            <li>Character scene variations</li>
+            <li>Background music</li>
+            <li>Voice-over</li>
+          </ul>
+      </div>
+    </section>
+
+
+      <!-- ── PROMOTIONAL VIDEO ── -->
+    <section class="project-detail__video reveal">
+      <div style="padding:56.25% 0 0 0; position:relative;">
+        <iframe src="https://player.vimeo.com/video/1158187700?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NearBiew App Introduction"></iframe>
+      </div>
+    </section>
+
+    
+
+    <!-- ── PROJECT NAV (auto-rendered by main.js) ── -->
+    <div id="project-nav"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <load src="/partials/footer.html" />
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

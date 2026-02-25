@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Jeeyoung Min</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+  <load src="/partials/header.html" />
+
+  <!-- ABOUT HERO -->
+  <section class="about-page__hero">
+    <!-- Animated orb: pastel yellow sweeps left-bottom → center-top → right-bottom, once on load -->
+    <div class="about-page__hero-orb about-page__hero-orb--glow" aria-hidden="true"></div>
+    <div class="about-page__hero-orb about-page__hero-orb--sun"  aria-hidden="true"></div>
+
+    <p class="about-page__eyebrow reveal">About Me</p>
+    <h1 class="about-page__title reveal reveal--delay-1">
+      I believe great work<br>
+      happens when the<br>
+      vibes are high!
+    </h1>
+  </section>
+
+    <!-- CAREER JOURNEY -->
+  <section class="about-journey">
+    <p class="about-journey__label reveal">My Design Path & Identity</p>
+
+    <div class="about-journey__track reveal reveal--delay-1">
+
+      <!-- Full-span connecting line -->
+      <div class="about-journey__line"></div>
+
+      <!-- Node 1: Marketing Graphic Designer -->
+      <div class="about-journey__node about-journey__node--active">
+        <div class="about-journey__dot"></div>
+        <span class="about-journey__node-title">Marketing<br>Graphic Designer</span>
+        <span class="about-journey__node-sub">Brand assets,<br>print &amp; campaign visuals</span>
+      </div>
+
+      <!-- Node 2: Web Designer -->
+      <div class="about-journey__node about-journey__node--active">
+        <div class="about-journey__dot"></div>
+        <span class="about-journey__node-title">Web Designer</span>
+        <span class="about-journey__node-sub">Landing pages,<br>banners &amp; digital UI</span>
+      </div>
+
+      <!-- Node 3: UX/UI Designer -->
+      <div class="about-journey__node about-journey__node--current">
+        <div class="about-journey__dot"></div>
+        <span class="about-journey__node-title">UX / UI Designer</span>
+        <span class="about-journey__node-sub">End-to-end product<br>design &amp; prototyping</span>
+      </div>
+
+      <!-- "I'm here!" badge between UX/UI and Product Designer -->
+      <div class="about-journey__here">
+        <svg class="about-journey__here-arrow" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 5 L11 5 M7 1 L12 5 L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="about-journey__here-label">I'm here!</span>
+      </div>
+
+      <!-- Node 4: Product Designer (current target) -->
+      <div class="about-journey__node about-journey__node--current">
+        <div class="about-journey__dot"></div>
+        <span class="about-journey__node-title">Product Designer</span>
+        <span class="about-journey__node-sub">Systems thinking,<br>cross-functional leadership</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="about-page__content">
+
+    <!-- LEFT: Image + Stats -->
+    <div class="about-page__left">
+
+      <!-- Photo collage: 1 tall left + 2 stacked right -->
+      <div class="about-page__photos reveal">
+        <div class="about-page__photo about-page__photo--main">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy1_ee0msi.jpg" alt="Photo 1" class="about-page__photo-img">
+        </div>
+        <div class="about-page__photo-stack">
+          <div class="about-page__photo about-page__photo--sm">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy2_dravbo.jpg" alt="Photo 2" class="about-page__photo-img">
+          </div>
+          <div class="about-page__photo about-page__photo--sm">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy3_mdgx47.jpg" alt="Photo 3" class="about-page__photo-img">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- RIGHT: Bio + Skills -->
+    <div class="about-page__right">
+    <h2 class="section__title">The 3 Essentials of My Life</h2>
+      <div class="about-page__bio reveal">
+        <h2 class="about-page__skill-category">🌞️ Positive Vibes</h2>
+        <p class="about-page__body">
+          I’m a firm believer that positivity is contagious. I bring a "can-do" spirit to every project and aim to make every workspace a little brighter.
+        </p>
+      </div>
+
+      <div class="about-page__skills reveal reveal--delay-1">
+        <h2 class="about-page__skill-category">🐶 Dog Lover</h2>
+        <p class="about-page__body">
+          Outside of my family, dogs are my world. If I pet a dog today, it’s officially a 10/10 day!
+        </p>
+      </div>
+
+      <div class="about-page__skills reveal reveal--delay-2">
+        <h2 class="about-page__skill-category">🎵 Music YouTuber</h2>
+        <p class="about-page__body">
+          On weekends, I co-host a YouTube reaction channel with my husband, connecting with a global community of music lovers.
+        </p>
+
+        <!-- YOUTUBE CHANNEL -->
+  <section class="about-yt">
+
+    <!-- Channel image (circular) -->
+    <div class="about-yt__img-wrap reveal">
+      <!--
+        Replace src with your channel profile image URL.
+        To find it: go to youtube.com/@minneyandredd → right-click the profile photo → "Copy image address"
+      -->
+      <img
+        class="about-yt__img"
+        id="yt-channel-img"
+        src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771645624/youtube_thumb_pwzbpa.jpg"
+        alt="Minney & Redd YouTube channel"
+      >
+    </div>
+
+    <!-- Text content -->
+    <div class="about-yt__body reveal reveal--delay-1">
+      <div class="about-yt__subs">
+        <span class="about-yt__subs-count">Minney &amp; Redd</span>
+        <span class="about-yt__subs-label">@minneyandredd</span>
+      </div>
+
+      <div class="about-yt__meta">
+        <div>
+          <span class="about-yt__subs-count">4.51K</span>
+          <span class="about-yt__subs-label">subscribers</span>
+        </div>
+      </div>
+
+      <a
+        class="about-yt__btn"
+        href="https://www.youtube.com/@minneyandredd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <!-- YouTube logo -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/>
+        </svg>
+        Browse our channel
+      </a>
+    </div>
+
+  </section>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  
+
+  <!-- FOOTER -->
+  <load src="/partials/footer.html" />
+
+  <script type="module" src="/assets/js/main.js"></script>
+
+  <!--
+    ── YOUTUBE SUBSCRIBER COUNT ────────────────────────────
+    To enable real-time subscriber count:
+    1. Get a free YouTube Data API v3 key at:
+       https://console.cloud.google.com/ → Enable "YouTube Data API v3"
+    2. Find your Channel ID at:
+       https://www.youtube.com/@minneyandredd → Settings → Advanced settings → Channel ID
+    3. Replace the placeholders below with your real values.
+    Without a key, the count will display "—" gracefully.
+  -->
+  <script>
+    (async function fetchYtSubs() {
+      const API_KEY    = '';          // ← paste your YouTube Data API v3 key here
+      const CHANNEL_ID = '';          // ← paste your Channel ID here (UCxxxxxxxx...)
+      const el = document.getElementById('yt-subs-count');
+      if (!API_KEY || !CHANNEL_ID || !el) return;
+      try {
+        const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
+        const res = await fetch(url);
+        if (!res.ok) return;
+        const data = await res.json();
+        const count = data?.items?.[0]?.statistics?.subscriberCount;
+        if (!count) return;
+        const n = parseInt(count, 10);
+        // Format: 1.2K, 45K, 1.1M etc.
+        let formatted;
+        if      (n >= 1_000_000) formatted = (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+        else if (n >= 1_000)     formatted = (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
+        else                     formatted = n.toLocaleString();
+        el.textContent = formatted;
+      } catch (_) { /* fail silently — static fallback already shown */ }
+    })();
+
+    // Show channel image once src is set
+    (function initYtImg() {
+      const img = document.getElementById('yt-channel-img');
+      if (!img || !img.src) return;
+      img.onload = () => { img.style.display = 'block'; };
+      img.onerror = () => { img.style.display = 'none'; };
+      if (img.complete && img.naturalWidth) img.style.display = 'block';
+    })();
+  </script>
+</body>
+</html>

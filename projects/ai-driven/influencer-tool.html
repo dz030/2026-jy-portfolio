@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internal Influencer Marketing Tool — Jeeyoung Min</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+  <load src="/partials/header.html" />
+
+  <!-- PROJECT DETAIL -->
+  <main class="project-detail">
+
+    <!-- ── BACK LINK ── -->
+    <load src="/partials/back-link.html" />
+
+   <!-- ── HEADER ── -->
+    <header class="project-detail__header">
+      <p class="project-detail__eyebrow reveal">AI-Driven Projects</p>
+      <h1 class="project-detail__title reveal reveal--delay-1">Internal Influencer Marketing Tool</h1>
+
+      <div class="project-detail__meta reveal reveal--delay-2">
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Role</span>
+          <span class="project-detail__meta-value">Sole Designer & Builder</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Timeline</span>
+          <span class="project-detail__meta-value">2 weeks</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Team</span>
+          <span class="project-detail__meta-value">Marketing Stakeholders</span>
+
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ── HERO IMAGE ── -->
+    <div class="project-detail__hero-img reveal">
+      <div class="project-detail__hero-img-wrap">
+        <picture>
+          <source media="(max-width: 767px)" srcset="https://res.cloudinary.com/dluuq2twb/image/upload/v1771877843/influencer_hero_mo_csknid.jpg">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771881365/influencer_hero_pc_b3nzld.jpg" alt="DTC Website Redesign — live site preview" class="project-detail__hero-img-el">
+        </picture>
+        <a href="https://jy-marketing-tool.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-detail__live-btn">
+          <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
+          Try App (Demo)
+        </a>
+      </div>
+    </div>
+
+    <!-- ── OVERVIEW ── -->
+    <section class="project-detail__overview">
+      <div class="project-detail__overview-body reveal">
+        <p class="project-detail__body">
+         A lightweight tool vibe coded to help the marketing team instantly source, organize, and contact TikTok influencers using scraped data.
+        </p>
+      </div>
+      <aside class="project-detail__overview-sidebar reveal reveal--delay-1">
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Tools & APIs</p>
+          <div class="project-detail__tool-stack">
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/cursor.png" alt="" class="project-detail__tool-icon">Cursor</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/gemini.png" alt="" class="project-detail__tool-icon">Gemini</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/googlesheet.png" alt="" class="project-detail__tool-icon">Google Sheets</span>
+            <span class="project-detail__tool"><img src="/assets/images/tool-icons/apify.png" alt="" class="project-detail__tool-icon">Apify</span>
+          </div>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Project Scope</p>
+          <p class="project-detail__sidebar-value">AI-Assisted vibe coding Internal tool, workflow automation, no-code / low-code</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Status</p>
+          <div class="project-detail__sidebar-status">
+            <p class="project-detail__sidebar-value">Live</p>
+            <a href="https://jy-marketing-tool.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-detail__sidebar-live-btn">
+              <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
+              Try App (Demo)
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ── THE PROBLEM ── -->
+    <section class="project-detail__callout reveal">
+      <p class="project-detail__section-title">The Problem</p>
+      <p class="project-detail__callout-text">
+        Spreadsheet Fatigue & Overpriced Tools
+      </p>
+       <p class="project-detail__callout-text__body">
+          The team was stuck in "spreadsheet hell", manual scraping into Google Sheets was visually cluttered and difficult to navigate. Existing tools were overpriced with features we didn't need.
+        </p>
+      <ul class="project-detail__callout-text__body">
+        <p>The mission:</p>
+        <li><strong>UX Overhaul:</strong> Replace "uncomfortable" sheets with a simple, readable UI</li>
+        <li><strong>Smart Scaling:</strong> Build a custom, lightweight tool without the enterprise cost.</li>
+      </ul>
+       
+    </section>
+
+
+       <!-- ── RESEARCH ── -->
+    <section class="project-detail__outcomes reveal">
+      <p class="project-detail__section-title">Research: Define MVP</p>
+      <p class="project-detail__callout-text__body">I met with the marketing team and gathered core needs:</p>
+      <div class="project-detail__outcomes-grid">
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--search" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">Smart Discovery</div>
+          <div class="project-detail__outcome-subtitle">Follower counts and hashtag sorting</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--send" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">One-Click Outreach</div>
+          <div class="project-detail__outcome-subtitle">Bulk email and DM templates</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--campaign" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">Campaign Logic</div>
+          <div class="project-detail__outcome-subtitle">Grouping influencers for easy management</div>
+        </div>
+
+
+      </div>
+    </section>
+
+     <!-- ── PROCESS STEPS ── -->
+    <section class="project-detail__process reveal">
+      <p class="project-detail__section-title">Vibe Coded Process: Rapid MVP Build</p>
+      <div class="project-detail__process-steps">
+
+        <div class="project-detail__step">
+          <div class="project-detail__step-num">01</div>
+          <div class="project-detail__step-body">
+            <span class="icon icon--alt-route project-detail__step-icon" aria-hidden="true"></span>
+            <h3 class="project-detail__step-title">Data Integration</h3>
+            <p class="project-detail__step-desc">Set up Apify and Google Sheets to handle seamless reading/writing of influencer data.</p>
+          </div>
+        </div>
+
+        <div class="project-detail__step">
+          <div class="project-detail__step-num">02</div>
+          <div class="project-detail__step-body">
+            <span class="icon icon--code project-detail__step-icon" aria-hidden="true"></span>
+            <h3 class="project-detail__step-title">Direct-to-Code UI</h3>
+            <p class="project-detail__step-desc">Skipped traditional design tools to vibe code a functional desktop interface immediately.</p>
+          </div>
+        </div>
+
+        <div class="project-detail__step">
+          <div class="project-detail__step-num">03</div>
+          <div class="project-detail__step-body">
+            <span class="icon icon--autorenew project-detail__step-icon" aria-hidden="true"></span>
+            <h3 class="project-detail__step-title">Agile Refinement</h3>
+            <p class="project-detail__step-desc">Adjusted the UI in real-time whenever a feature felt "uncomfortable" or confusing.</p>
+          </div>
+        </div>
+
+        <div class="project-detail__step">
+          <div class="project-detail__step-num">04</div>
+          <div class="project-detail__step-body">
+            <span class="icon icon--history project-detail__step-icon" aria-hidden="true"></span>
+            <h3 class="project-detail__step-title">Rapid Iteration</h3>
+            <p class="project-detail__step-desc">Shipped a working MVP in 14 days by focusing on core utility over visual polish.</p>
+          </div>
+        </div>
+
+        <div class="project-detail__step">
+          <div class="project-detail__step-num">05</div>
+          <div class="project-detail__step-body">
+            <span class="icon icon--chat project-detail__step-icon" aria-hidden="true"></span>
+            <h3 class="project-detail__step-title">Live Feedback Loop</h3>
+            <p class="project-detail__step-desc">Finalized the tool through direct, over-the-shoulder testing with the marketing team.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- ── SPLIT: TEXT + IMAGE ── -->
+    <section class="project-detail__features project-detail__features--no-dividers reveal">
+      <p class="project-detail__section-title">MVP Solution</p>
+
+      <div class="project-detail__split reveal">
+        <div class="project-detail__split-img project-detail__split-img--has-video" style="background:#fff;">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771880156/influencer-tool-solution1_ambodk.jpg" alt="Smart Discovery" class="project-detail__split-video-fallback">
+          <iframe src="https://player.vimeo.com/video/1167503639?background=1&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-detail__split-text">
+          <span class="project-detail__feature-num">01</span>
+          <h3 class="project-detail__feature-title">Smart Discovery</h3>
+          <p class="project-detail__feature-desc">Instantly find TikTok creators by hashtag and follower count.</p>
+        </div>
+      </div>
+
+      <div class="project-detail__split reveal">
+        <div class="project-detail__split-img">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771879609/influencer-tool-solution2_ijufpn.jpg" alt="Key Screens" class="project-detail__split-img-el">
+        </div>
+        <div class="project-detail__split-text">
+          <span class="project-detail__feature-num">02</span>
+          <h3 class="project-detail__feature-title">Quick Outreach</h3>
+          <p class="project-detail__feature-desc">Save and reuse bulk email and DM templates.</p>
+        </div>
+      </div>
+
+      <div class="project-detail__split reveal">
+        <div class="project-detail__split-img">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771879607/influencer-tool-solution3_tetlc8.jpg" alt="Key Screens" class="project-detail__split-img-el">
+        </div>
+        <div class="project-detail__split-text">
+          <span class="project-detail__feature-num">03</span>
+          <h3 class="project-detail__feature-title">Campaign Manager</h3>
+          <p class="project-detail__feature-desc">Group influencers for targeted marketing efforts.</p>
+        </div>
+      </div>
+
+      <div class="project-detail__split reveal">
+        <div class="project-detail__split-img">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771879612/influencer-tool-solution4_ds1dkd.jpg" alt="Key Screens" class="project-detail__split-img-el">
+        </div>
+        <div class="project-detail__split-text">
+          <span class="project-detail__feature-num">04</span>
+          <h3 class="project-detail__feature-title">Visual Database</h3>
+          <p class="project-detail__feature-desc">View info clearly and sync to Google Sheets.</p>         
+        </div>
+      </div>
+
+    </section>
+
+        <!-- ── OUTCOMES ── -->
+    <section class="project-detail__outcomes reveal">
+      <p class="project-detail__section-title">Outcomes</p>
+      <div class="project-detail__outcomes-grid">
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-target="2"
+                 data-count-suffix="x">2x</div>
+            <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>
+          </div>
+          <div class="project-detail__outcome-title">Sourcing speed</div>
+          <div class="project-detail__outcome-subtitle">Replaced messy data rows with a visual dashboard, letting the team vet influencer fit instantly rather than digging through cells.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-prefix="$"
+                 data-count-target="7200">$7200</div>
+             <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>
+          </div>
+          <div class="project-detail__outcome-title">Annual savings</div>
+          <div class="project-detail__outcome-subtitle">Cut overhead by replacing overpriced enterprise software with a custom, vibe-coded tool focused strictly on core needs.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-target="2"
+                 data-count-suffix="wks">2wks</div>
+          </div>
+          <div class="project-detail__outcome-title">Development time</div>
+          <div class="project-detail__outcome-subtitle">Shipped a high-utility MVP from scratch, moving the team from a broken workflow to a polished tool in record time.</div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- ── REFLECTION ── -->
+    <section class="project-detail__text-section">
+      <div class="project-detail__text-section-inner reveal">
+        <h2 class="project-detail__section-title">Reflection</h2>
+        <p class="project-detail__body">
+          This project reinforced the value of building focused, low-complexity tools that solve specific workflow problems. Working under a tight timeline emphasized prioritizing core functionality over polish to deliver impact quickly.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── PROJECT NAV (auto-rendered by main.js) ── -->
+    <div id="project-nav"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <load src="/partials/footer.html" />
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

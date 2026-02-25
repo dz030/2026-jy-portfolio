@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeeyoung Min — Designer</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+<load src="/partials/header.html" />
+
+  <!-- ── PROJECT CARD TEMPLATE ──────────────────────────────
+       Edit this ONE template and every card updates.
+
+       Slot references (filled from data-card attributes):
+         [data-slot="link"]         → href
+         [data-slot="thumb-inner"]  → class: project-card__thumb--{thumb-color}
+         [data-slot="thumb-img"]    → <img> src (hidden when empty)
+         [data-slot="thumb-video"]  → <video> src (hidden when empty)
+         [data-slot="thumb-label"]  → fallback label text
+         [data-slot="badge"]        → badge text (hidden when empty)
+         [data-slot="title"]        → card title text
+         [data-slot="subtitle"]     → card subtitle/muted text (hidden when empty)
+         [data-slot="desc"]         → description paragraph
+  ─────────────────────────────────────────────────────────── -->
+  <template id="project-card-template">
+    <a class="project-card" href="" data-slot="link">
+      <div class="project-card__thumb">
+        <span class="project-card__badge" data-slot="badge"></span>
+        <div class="project-card__thumb-inner" data-slot="thumb-inner">
+          <img data-slot="thumb-img" alt="" style="width:100%;height:100%;object-fit:cover;display:none;">
+          <video data-slot="thumb-video" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:none;"></video>
+          <span class="project-card__thumb-label" data-slot="thumb-label"></span>
+        </div>
+      </div>
+      <div class="project-card__info">
+        <div class="project-card__info-top">
+          <span class="project-card__title">
+            <span data-slot="title"></span><span class="project-card__title--muted" data-slot="subtitle"></span>
+          </span>
+          <span class="project-card__arrow"><span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span></span>
+        </div>
+        <p class="project-card__desc" data-slot="desc"></p>
+      </div>
+    </a>
+  </template>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <p class="hero__label">Product &amp; UX Designer</p>
+    <h1 class="hero__title">Hi, I'm Jeeyoung!</h1>
+    <p class="hero__desc">
+      With 6+ years of experience, I design for B2B, DTC,<br>
+      and internal systems, making complicated workflows<br>
+      feel simple, intuitive, and even a bit fun.
+
+    </p>
+    <a href="/about.html" class="hero__btn">
+      <span>Learn About Me</span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M1 7h12M7.5 2.5L12 7l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <div class="hero__scroll">
+  <div class="hero__scroll-bar"></div>
+  <span class="hero__scroll-label">Scroll</span>
+</div>
+  </section>
+
+  <!-- PRODUCT & UX WORK -->
+  <section class="section" id="work">
+    <div class="section__header reveal">
+      <h2 class="section__title">Product &amp; UX Work</h2>
+      <span class="section__count">5 projects</span>
+    </div>
+    <div class="project-grid reveal reveal--delay-1">
+
+      <div data-card
+          data-href="/projects/product-ux/dtc-website-redesign.html"
+          data-thumb-color="warm"
+          data-thumb-label="DTC Website"
+          data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648296/DTC_thumb_jur547.jpg"
+          data-thumb-video=""         
+          data-title="DTC Website Redesign"
+          data-desc="Rebranded parent brand and redesigned website to enhance the customer shopping experience.">
+        </div>
+
+      <div data-card
+        data-href="/projects/product-ux/b2b-order-app.html"
+        data-thumb-color="pink"
+        data-thumb-label="B2B Order App"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648410/b2bapp_thumb_y2pgmw.jpg"
+        data-thumb-video=""      
+        data-badge="Pre-Launch"
+        data-title="B2B Order App for Retail Customers"
+        data-desc="Led design and team execution of iOS &amp; Android app to boost order efficiency.">
+      </div>
+
+      <div data-card
+        data-href="/projects/product-ux/b2b-website-redesign.html"
+        data-thumb-color="blue"
+        data-thumb-label="B2B Website"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648411/B2B_thumb_wddvt9.jpg"
+        data-thumb-video=""   
+        data-title="B2B Website for Retail Customers"
+        data-desc="Redesigned wholesale website for online retail customers to join and order.">
+      </div>
+
+      <div data-card
+        data-href="/projects/product-ux/shopify-pos-migration.html"
+        data-thumb-color="green"
+        data-thumb-label="Shopify POS"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648413/POS_thumb_kzq8ip.jpg"
+        data-thumb-video=""   
+        data-title="Shopify POS Migration"
+        data-desc="Implemented the Shopify POS system, automating invoicing and simplifying complex sales workflows.">
+      </div>
+
+      <div data-card
+        data-href="/projects/product-ux/nearbiew-app.html"
+        data-thumb-color="teal"
+        data-thumb-label="NearBiew App"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648413/nearbiew_thumb_d0hoa6.jpg"
+        data-thumb-video=""
+        data-badge="Paused"
+        data-badge-mod="paused"
+        data-title="NearBiew App"
+        data-desc="Designed complete mobile app system for customers and retailers, including UI and promotional video.">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI-DRIVEN PROJECTS -->
+  <section class="section">
+    <div class="section__header reveal">
+      <h2 class="section__title">AI-Driven Projects</h2>
+      <span class="section__count">3 projects</span>
+    </div>
+    <div class="project-grid reveal reveal--delay-1">
+
+      <div data-card
+        data-href="/projects/ai-driven/influencer-tool.html"
+        data-thumb-color="peach"
+        data-thumb-label="Influencer Tool"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648412/influencer_thumb_afqzkw.jpg"
+        data-thumb-video=""   
+        data-title="Internal Influencer Marketing Tool"
+        data-desc="Vibe coded internal tools for influencer outreach and boosting team productivity.">
+      </div>
+
+      <div data-card
+        data-href="/projects/ai-driven/intelligent-fulfillment-system.html"
+        data-thumb-color="purple"
+        data-thumb-label="Fulfillment System"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648576/auto_thumb_cu1bxr.jpg"
+        data-thumb-video=""   
+        data-title="Intelligent Fulfillment System"
+        data-desc="Agentic influencer workflows through deep API integration and cross-platform logic.">
+      </div>
+
+      <div data-card
+        data-href="/projects/ai-driven/ai-motion-graphic.html"
+        data-thumb-color="mint"
+        data-thumb-label="Motion Graphic"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648410/ai-video_thumb_mp2dyj.jpg"
+        data-thumb-video=""   
+        data-title="AI Powered Motion Graphic"
+        data-desc="Motion graphic for mobile app promotion, designed to clearly communicate product value.">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIGITAL & VISUAL WORK -->
+  <section class="section">
+    <div class="section__header reveal">
+      <h2 class="section__title">Digital &amp; Visual Work</h2>
+      <span class="section__count">2 projects</span>
+    </div>
+    <div class="project-grid project-grid--two-col reveal reveal--delay-1">
+
+      <div data-card
+        data-href="/projects/digital-visual/fashion-web-ui-design.html"
+        data-thumb-color="yellow"
+        data-thumb-label="Fashion Web/UI"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771887699/fashion_thumb_o8ed1o.jpg"
+        data-thumb-video=""   
+        data-title="Fashion Retail Web/UI Design"
+        data-desc="200+ responsive landing pages for PC and Mobile.">
+      </div>
+
+      <div data-card
+        data-href="/projects/digital-visual/web-banners-newsletters.html"
+        data-thumb-color="lavend"
+        data-thumb-label="Banners &amp; Newsletters"
+        data-thumb-img="https://res.cloudinary.com/dluuq2twb/image/upload/v1771648414/web-banner-nl_thumb_xggmya.jpg"
+        data-thumb-video=""   
+        data-title="Web Banners &amp; Newsletters"
+        data-desc="Digital deliverables for beauty marketing campaigns.">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT
+  <section id="about" class="about">
+    <div class="reveal">
+      <p class="about__eyebrow">About Me</p>
+      <h2 class="about__headline">
+        Hi, I'm Jeeyoung —<br>
+        I make complex things<br>
+        feel simple.
+      </h2>
+      <p class="about__body">
+        With 6+ years of experience across B2B, DTC, and internal systems,
+        I turn complicated workflows into interfaces people actually enjoy using.
+        I care about craft, clarity, and making things that work beautifully.
+      </p>
+      <a href="mailto:minneymin333@gmail.com" class="about__link">
+        Get in touch
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="about__stats reveal reveal--delay-2">
+      <div class="stat">
+        <div class="stat__value">6+</div>
+        <div class="stat__label">Years of experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">40+</div>
+        <div class="stat__label">Projects shipped</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">B2B</div>
+        <div class="stat__label">Enterprise &amp; wholesale</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">DTC</div>
+        <div class="stat__label">Consumer &amp; retail</div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- FOOTER -->
+   <load src="/partials/footer.html" />
+
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

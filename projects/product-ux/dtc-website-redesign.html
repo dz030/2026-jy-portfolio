@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DTC Website Redesign — Jeeyoung Min</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+  <load src="/partials/header.html" />
+
+  <!-- PROJECT DETAIL -->
+  <main class="project-detail">
+
+    <!-- ── BACK LINK ── -->
+    <load src="/partials/back-link.html" />
+
+    <!-- ── HEADER ── -->
+    <header class="project-detail__header">
+      <p class="project-detail__eyebrow reveal">Product &amp; UX Design</p>
+      <h1 class="project-detail__title reveal reveal--delay-1">DTC Website Redesign</h1>
+
+      <div class="project-detail__meta reveal reveal--delay-2">
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Role</span>
+          <span class="project-detail__meta-value">Lead UX/UI Designer</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Timeline</span>
+          <span class="project-detail__meta-value">6 months</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Team</span>
+          <span class="project-detail__meta-value">Design team of 2</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── HERO IMAGE ── -->
+    <div class="project-detail__hero-img reveal">
+      <div class="project-detail__hero-img-wrap">
+        <picture>
+          <source media="(max-width: 767px)" srcset="https://res.cloudinary.com/dluuq2twb/image/upload/v1771694336/DTC_hero_mo_ead2dy.jpg">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771694336/DTC_hero_pc_mcwklw.jpg" alt="DTC Website Redesign — live site preview" class="project-detail__hero-img-el">
+        </picture>
+        <a href="https://iwellus.com" target="_blank" rel="noopener noreferrer" class="project-detail__live-btn">
+          <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
+          View live site
+        </a>
+      </div>
+    </div>
+
+    <!-- ── OVERVIEW ── -->
+    <section class="project-detail__overview">
+      <div class="project-detail__overview-body reveal">
+        <p class="project-detail__body">
+          As the project lead, I directed the end-to-end rebrand and Shopify DTC redesign to streamline the ecosystem and maximize conversions.
+        </p>
+      </div>
+      <aside class="project-detail__overview-sidebar reveal reveal--delay-1">
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Company</p>
+          <p class="project-detail__sidebar-value">Beauty &amp; Wellness Brand</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Platform</p>
+          <p class="project-detail__sidebar-value">Shopify</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Deliverables</p>
+          <p class="project-detail__sidebar-value">Brand identity, design system, 30+ banner templates, responsive UI</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Status</p>
+          <div class="project-detail__sidebar-status">
+            <p class="project-detail__sidebar-value">Launched</p>
+            <a href="https://iwellus.com" target="_blank" rel="noopener noreferrer" class="project-detail__sidebar-live-btn">
+              <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
+              View live site
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ── THE PROBLEM ── -->
+    <section class="project-detail__callout reveal">
+      <p class="project-detail__section-title">The Problem</p>
+      <p class="project-detail__callout-text">
+        Hard-to-Maintain Sites, Poor Customer Discovery
+      </p>
+      <p class="project-detail__callout-text__body">
+          5 separate brand websites were difficult for a small marketing team to maintain and offered a fragmented customer experience.
+        </p>
+        <p class="project-detail__callout-text__body">
+          Limited site structure and features made the brands hard to discover, reduced engagement, and prevented customers from understanding or exploring the full product ecosystem.
+        </p>
+    </section>
+
+        <!-- ── THE SOLUTION ── -->
+    <section class="project-detail__solution reveal">
+      <p class="project-detail__section-title">The Solution</p>
+
+      <!-- Tab bar -->
+      <div class="sol-tabs" role="tablist" aria-label="Solution features">
+        <button class="sol-tab sol-tab--active" role="tab" aria-selected="true"  aria-controls="sol-panel-1" data-tab="1">One Centralized Website</button>
+        <button class="sol-tab"                 role="tab" aria-selected="false" aria-controls="sol-panel-2" data-tab="2">Brand Pages</button>
+        <button class="sol-tab"                 role="tab" aria-selected="false" aria-controls="sol-panel-3" data-tab="3">Smart Filters</button>
+        <button class="sol-tab"                 role="tab" aria-selected="false" aria-controls="sol-panel-4" data-tab="4">Loyalty & Subs</button>
+        <button class="sol-tab"                 role="tab" aria-selected="false" aria-controls="sol-panel-5" data-tab="5">Blog</button>
+        <button class="sol-tab"                 role="tab" aria-selected="false" aria-controls="sol-panel-6" data-tab="6">Banners</button>
+      </div>
+
+      <!-- Panels -->
+      <div class="sol-panels">
+
+        <div class="sol-panel sol-panel--active" id="sol-panel-1" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">One Centralized Website</h3>
+            <p class="sol-panel__desc">Integrated all brands into one centralized website, making updates and promotions manageable for a small marketing team.</p>
+          </div>
+          <div class="sol-panel__images">
+            <div class="sol-panel__img-item has-img">
+              <span class="sol-panel__img-label">Before</span>
+              <div class="sol-panel__img-scroll">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771695980/01_Homepage_PC_before_olujme.jpg" alt="Before" class="sol-panel__img">
+              </div>
+            </div>
+            <div class="sol-panel__img-item has-img">
+              <span class="sol-panel__img-label">After</span>
+              <div class="sol-panel__img-scroll">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771695981/01_Homepage_PC_after_zqcs2m.jpg" alt="After" class="sol-panel__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-panel" id="sol-panel-2" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">Brand-Specific Landing Pages</h3>
+            <p class="sol-panel__desc">Designed each brand landing pages with storytelling, product discovery, and category deep dives.</p>
+          </div>
+          <div class="sol-panel__images sol-panel__images--scroll">
+            <!-- Before: 7 images stacked, inner scroll -->
+            <div class="sol-panel__img-item sol-panel__img-item--scroll has-img">
+              <span class="sol-panel__img-label">Before</span>
+              <div class="sol-panel__img-scroll">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704561/01.wells_homepage_PC_01_pfgvfp.jpg" alt="Before 1" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704560/01.wells_homepage_PC_02_znhfve.jpg" alt="Before 2" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704563/01.wells_homepage_PC_03_ixdxnk.jpg" alt="Before 3" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704565/01.wells_homepage_PC_04_fvxcv1.jpg" alt="Before 4" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704569/01.wells_homepage_PC_05_gkwmsl.jpg" alt="Before 5" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704566/01.wells_homepage_PC_06_laxbeh.jpg" alt="Before 6" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704571/01.wells_homepage_PC_07_eyjgc0.jpg" alt="Before 7" class="sol-panel__img">
+              </div>
+            </div>
+            <!-- After: 6 images stacked, inner scroll -->
+            <div class="sol-panel__img-item sol-panel__img-item--scroll has-img">
+              <span class="sol-panel__img-label">After</span>
+              <div class="sol-panel__img-scroll">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704572/02.01_wells_landingpage_haircare_PC_v2-_1__01_czcs0s.jpg" alt="After 1" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704574/02.01_wells_landingpage_haircare_PC_v2-_1__02_tgytzk.jpg" alt="After 2" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704576/02.01_wells_landingpage_haircare_PC_v2-_1__03_no3pua.jpg" alt="After 3" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704578/02.01_wells_landingpage_haircare_PC_v2-_1__04_p6k90b.jpg" alt="After 4" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704580/02.01_wells_landingpage_haircare_PC_v2-_1__05_uyqlhf.jpg" alt="After 5" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771704581/02.01_wells_landingpage_haircare_PC_v2-_1__06_gx87rm.jpg" alt="After 6" class="sol-panel__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-panel" id="sol-panel-3" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">Curated Product Filters</h3>
+            <p class="sol-panel__desc">Added curated product filters for 1,000+ products (by category, concern, and type) to help customers find the right solutions.</p>
+          </div>
+          <div class="sol-panel__images">
+            <div class="sol-panel__img-item">
+              <span class="sol-panel__img-label">Before</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--warm"><span class="project-detail__placeholder-label">Filters — Before</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771708296/smart_filter1_mlh88o.jpg" alt="Filters before" class="sol-panel__img">
+              </div>
+            </div>
+            <div class="sol-panel__img-item">
+              <span class="sol-panel__img-label">After</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--pink"><span class="project-detail__placeholder-label">Filters — After</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771708299/smart_filter2_fcozso.jpg" alt="Filters after" class="sol-panel__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-panel" id="sol-panel-4" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">Major Feature Updates</h3>
+            <p class="sol-panel__desc">Implemented features to support long-term customer retention and sustainable sales growth.</p>
+          </div>
+          <div class="sol-panel__images">
+            <div class="sol-panel__img-item">
+              <span class="sol-panel__img-label">Subscriptions & Reviews Popup</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--warm"><span class="project-detail__placeholder-label">Features — Before</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771705946/subscription-feature_kdrnc3.jpg" alt="Features before" class="sol-panel__img">
+              </div>
+            </div>
+            <div class="sol-panel__img-item sol-panel__img-item--scroll">
+              <span class="sol-panel__img-label">Loyalty Program</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--pink"><span class="project-detail__placeholder-label">Features — After</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706421/loyalty_01_kmsp8q.jpg" alt="After 1" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706417/loyalty_02_v74cym.jpg" alt="After 2" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706413/loyalty_03_l3ijzs.jpg" alt="After 3" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706419/loyalty_04_pfedgu.jpg" alt="After 4" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706414/loyalty_05_lm7y8u.jpg" alt="After 5" class="sol-panel__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-panel" id="sol-panel-5" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">Blog</h3>
+            <p class="sol-panel__desc">Created a blog and educational content section to drive return visits and brand understanding.</p>
+          </div>
+          <div class="sol-panel__images sol-panel__images--v2--single">
+            <div class="sol-panel__img-item sol-panel__img-item--scroll">
+             
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--warm"><span class="project-detail__placeholder-label">Blog — Before</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706823/blog_01_ghrsd0.jpg" alt="Blog 1" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706825/blog_02_zs1mpj.jpg" alt="Blog 2" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706830/blog_03_a3k2td.jpg" alt="Blog 3" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706827/blog_04_ciuapl.jpg" alt="Blog 4" class="sol-panel__img">
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771706821/blog_05_ka7fbx.jpg" alt="Blog 5" class="sol-panel__img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sol-panel" id="sol-panel-6" role="tabpanel">
+          <div class="sol-panel__text">
+            <h3 class="sol-panel__title">Dynamic Website Banner Templates</h3>
+            <p class="sol-panel__desc">Built dynamic website banners and templates for ongoing marketing maintenance.</p>
+          </div>
+          <div class="sol-panel__images">
+            <div class="sol-panel__img-item">
+              <span class="sol-panel__img-label">PC Hero banner template</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--warm"><span class="project-detail__placeholder-label">Banners — Before</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771707055/01_PC_main_banner_pfg2ch.jpg" alt="Banners before" class="sol-panel__img">
+              </div>
+            </div>
+            <div class="sol-panel__img-item">
+              <span class="sol-panel__img-label">MO Hero banner template</span>
+              <div class="sol-panel__img-scroll">
+                <div class="project-detail__placeholder project-detail__placeholder--pink"><span class="project-detail__placeholder-label">Banners — After</span></div>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771707489/01_MO_main_banner2_zdtfrv.jpg" alt="Banners after" class="sol-panel__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sol-panels -->
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="project-detail__process">
+      <p class="project-detail__section-title reveal">Process</p>
+      <div class="project-detail__process-cards">
+
+        <!-- Step 1 -->
+        <div class="project-detail__process-card reveal">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">01</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--search"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Research &amp; Benchmarking</h3>
+          <p class="project-detail__process-card-desc">Reviewed old sites and leading beauty websites to identify best practices for structure, navigation, and engagement.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="project-detail__process-card reveal reveal--delay-1">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">02</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--account-tree"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Information Architecture &amp; Sitemaps</h3>
+          <p class="project-detail__process-card-desc">Consolidated sitemaps to unify 5 brands and optimize content hierarchy.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="project-detail__process-card reveal reveal--delay-2">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">03</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--draw"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Ideation &amp; Wireframes</h3>
+          <p class="project-detail__process-card-desc">Developed low-fidelity wireframes for navigation, discovery, and product flows.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="project-detail__process-card reveal">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">04</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--palette"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Visual Design &amp; Rebranding</h3>
+          <p class="project-detail__process-card-desc">Designed mood boards, typography, and color systems; created the new parent brand logo and brand guidelines.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="project-detail__process-card reveal reveal--delay-1">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">05</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--rocket-launch"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">High-Fidelity Prototypes &amp; Implementation</h3>
+          <p class="project-detail__process-card-desc">Refined solutions based on feedback until workflows were finalized.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+        <!-- ── IMAGE GRID (2-up) ── -->
+    <section class="project-detail__process">
+      <p class="project-detail__section-title reveal">Rebranding</p>
+    <div class="project-detail__img-grid reveal">
+      <div class="project-detail__img-grid-item">
+        <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771778748/guideline_1_wnpr4t.jpg" alt="Before — Homepage" class="project-detail__grid-img">
+      </div>
+      <div class="project-detail__img-grid-item">
+        <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771778748/guideline_2_ff8rno.jpg" alt="After — Homepage" class="project-detail__grid-img">
+      </div>
+    </div> 
+    </section>
+
+    <!-- ── OUTCOMES ── -->
+    <section class="project-detail__outcomes reveal">
+      <p class="project-detail__section-title">Outcomes</p>
+      <div class="project-detail__outcomes-grid">
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-prefix="~"
+                 data-count-target="50"
+                 data-count-suffix="%">~50%</div>
+            <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>
+          </div>
+          <div class="project-detail__outcome-title">Marketing team efficiency</div>
+          <div class="project-detail__outcome-subtitle">Time spent updating promotions across 5 sites dropped from ~10 hrs/week to ~5 hrs/week.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-target="102"
+                 data-count-suffix="%">102%</div>
+             <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>
+          </div>
+          <div class="project-detail__outcome-title">Returning customers</div>
+          <div class="project-detail__outcome-subtitle">Year-over-year repeat buyers doubled, supported by the introduction of a loyalty program.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-target="27"
+                 data-count-suffix="%">27%</div>
+            <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>     
+          </div>
+          <div class="project-detail__outcome-title">Increase in site engagement</div>
+          <div class="project-detail__outcome-subtitle">Year-over-year, users engaged in longer, more meaningful sessions per visit.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-value-wrap">
+            <div class="project-detail__outcome-value"
+                 data-count-target="104"
+                 data-count-suffix="%">104%</div>
+            <span class="icon icon--arrow-upward outcome-arrow-up" aria-hidden="true"></span>     
+          </div>
+          <div class="project-detail__outcome-title">Increase in total orders</div>
+          <div class="project-detail__outcome-subtitle">Year-over-year order volume more than doubled post-launch, driven by UX improvements and marketing campaigns.</div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- ── REFLECTION ── -->
+    <section class="project-detail__text-section">
+      <div class="project-detail__text-section-inner reveal">
+        <h2 class="project-detail__section-title">Reflection</h2>
+        <p class="project-detail__body">
+          This project taught me how to design <strong>scalable multi-brand experiences</strong> and improve efficiency for small teams. Next time, I’d integrate user testing and analytics earlier to further optimize the customer journey.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ── PROJECT NAV (auto-rendered by main.js) ── -->
+    <div id="project-nav"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <load src="/partials/footer.html" />
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

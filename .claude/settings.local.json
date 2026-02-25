@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(perl:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sudo chown:*)",
+      "Bash(pkill:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
+    ]
+  }
+}

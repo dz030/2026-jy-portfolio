@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NearBiew App — Jeeyoung Min</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot" class="cursor__dot"></div>
+  <div id="cursor-ring" class="cursor__ring"></div>
+
+  <!-- NAV -->
+  <load src="/partials/header.html" />
+
+  <!-- PROJECT DETAIL -->
+  <main class="project-detail">
+
+    <!-- ── BACK LINK ── -->
+    <load src="/partials/back-link.html" />
+
+    <!-- ── HEADER ── -->
+    <header class="project-detail__header">
+      <div class="project-detail__eyebrow-row reveal">
+        <p class="project-detail__eyebrow">Product &amp; UX Design</p>
+        <span class="project-detail__badge project-detail__badge--paused">Paused</span>
+      </div>
+      <h1 class="project-detail__title reveal reveal--delay-1">NearBiew App</h1>
+
+      <div class="project-detail__meta reveal reveal--delay-2">
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Role</span>
+          <span class="project-detail__meta-value">Lead UX/UI Designer</span>
+        </div>
+
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Timeline</span>
+          <span class="project-detail__meta-value">6 months</span>
+        </div>
+        <div class="project-detail__meta-item">
+          <span class="project-detail__meta-label">Team</span>
+          <span class="project-detail__meta-value">1 UX/UI Designer, 1 Jr. Developer</span>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ── WHY PAUSED NOTICE ── -->
+    <div class="project-detail__status-notice reveal">
+      <div class="project-detail__status-notice-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="11" r="0.75" fill="currentColor"/>
+        </svg>
+      </div>
+      <div>
+        <p class="project-detail__status-notice-title">Project Paused</p>
+        <p class="project-detail__status-notice-text">NearBiew was strategically paused due to market shifts prior to development. All design work is complete. This case study covers the full design system, both app experiences, and the promotional video I created to pitch the product.</p>
+      </div>
+    </div>
+
+    <!-- ── HERO IMAGE ── -->
+    <div class="project-detail__hero-img reveal">
+      <div class="project-detail__hero-img-wrap">
+        <picture>
+          <source media="(max-width: 767px)" srcset="https://res.cloudinary.com/dluuq2twb/image/upload/v1771811832/nearbiew_hero_mo_sc1tyb.jpg">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771811833/nearbiew_hero_pc_lqyoac.jpg" alt="DTC Website Redesign — live site preview" class="project-detail__hero-img-el">
+        </picture>
+      </div>
+    </div>
+
+    <!-- ── OVERVIEW ── -->
+    <section class="project-detail__overview">
+      <div class="project-detail__overview-body reveal">
+        <p class="project-detail__body">
+          Led the team and designed a two-sided app to discover local beauty deals nearby.
+        </p>
+      </div>
+      <aside class="project-detail__overview-sidebar reveal reveal--delay-1">
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Platform</p>
+          <p class="project-detail__sidebar-value">iOS Mobile App</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Deliverables</p>
+          <p class="project-detail__sidebar-value">Customer app, retailer app, design system, promo video</p>
+        </div>
+        <div class="project-detail__sidebar-block">
+          <p class="project-detail__sidebar-label">Status</p>
+          <p class="project-detail__sidebar-value">Paused - Design Complete</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ── THE PROBLEM ── -->
+    <section class="project-detail__callout reveal">
+      <p class="project-detail__section-title">The Problem</p>
+      <section class="project-detail__text-cols">
+        <div class="project-detail__text-col">
+          <h3 class="project-detail__text-col-heading">
+            <span class="icon icon--person" aria-hidden="true"></span>
+            Customers
+          </h3>
+          <ul class="project-detail__callout-text__body">
+            <p>Local beauty customers couldn’t:</p>
+            <li>Find nearby store sales</li>
+            <li>Access a trusted community for beauty store reviews</li>
+            <li>Compare local deals in one place</li>
+          </ul>
+        </div>
+        <div class="project-detail__text-col">
+          <h3 class="project-detail__text-col-heading">
+            <span class="icon icon--storefront" aria-hidden="true"></span>
+            Retailers
+          </h3>
+          <ul class="project-detail__callout-text__body">
+            <p>Independent beauty stores lacked:</p>
+            <li>Digital visibility</li>
+            <li>Easy tools to promote local discounts</li>
+            <li>Cost-effective ways to drive foot traffic</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <!-- ── Big title ── -->
+    <section class="project-detail__callout reveal">
+      <p class="project-detail__callout-text">
+        Bridging Offline Beauty Retail with Online Discovery
+      </p>
+      <p class="project-detail__callout-text__body">NearBiew connects:</p>
+
+      <div class="project-detail__connects">
+        <div class="project-detail__connects-side">
+          <p class="project-detail__connects-heading">
+            <span class="icon icon--person" style="width:18px;height:18px;" aria-hidden="true"></span>
+            Customers
+          </p>
+          <p class="project-detail__connects-desc">Discover nearby beauty deals</p>
+        </div>
+
+        <div class="project-detail__connects-phone">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771861223/intro_eahvi9.png" alt="NearBiew app" class="project-detail__connects-phone-img">
+        </div>
+
+        <div class="project-detail__connects-side">
+          <p class="project-detail__connects-heading">
+            <span class="icon icon--storefront" style="width:18px;height:18px;" aria-hidden="true"></span>
+            Retailers
+          </p>
+          <p class="project-detail__connects-desc">Promote local offers and brands</p>
+        </div>
+      </div>
+    </section>
+
+        <!-- ── MY ROLE ── -->
+    <section class="project-detail__outcomes reveal">
+      <p class="project-detail__section-title">My Role</p>
+      <div class="project-detail__outcomes-grid">
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-title">I led:</div>
+          <ul class="project-detail__outcome-subtitle">
+            <li>UX strategy, end-to-end design, and visual branding</li>
+            <li>Monetization flows: ads, tiered subscriptions</li>
+            <li>Design system and UI consistency</li>
+          </ul>
+        </div>
+
+        <div class="project-detail__outcome">
+          <div class="project-detail__outcome-title">I managed:</div>
+          <ul class="project-detail__outcome-subtitle">
+            <li>MVP Scope and feature prioritization</li>
+            <li>Collaboration with a UX/UI designer</li>
+            <li>UX–dev handoff with a junior developer</li>
+          </ul>
+        </div>
+
+      
+      </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="project-detail__process">
+      <p class="project-detail__section-title reveal">Process</p>
+      <div class="project-detail__process-cards">
+
+        <!-- Step 1 -->
+        <div class="project-detail__process-card reveal">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">01</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--search"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Research & Benchmarking</h3>
+          <p class="project-detail__process-card-desc">Studied competitors (Yelp, Google Maps, DoorDash) for dual user insights and UX patterns.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="project-detail__process-card reveal reveal--delay-1">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">02</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--account-tree"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Sitemaps & Flows</h3>
+          <p class="project-detail__process-card-desc">Defined app structure, feature hierarchy, and seamless discovery paths.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="project-detail__process-card reveal reveal--delay-2">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">03</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--draw"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Prototypes</h3>
+          <p class="project-detail__process-card-desc">Created low/high-fidelity wireframes and interactive prototypes.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="project-detail__process-card reveal">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">04</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--palette"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Visual Design & Branding</h3>
+          <p class="project-detail__process-card-desc">Designed UI screens, brand identity, and motion graphics to ensure trust and consistency.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="project-detail__process-card reveal reveal--delay-1">
+          <div class="project-detail__process-card-top">
+            <span class="project-detail__process-card-num">05</span>
+            <span class="project-detail__process-card-icon" aria-hidden="true">
+              <span class="icon icon--handshake"></span>
+            </span>
+          </div>
+          <h3 class="project-detail__process-card-title">Handoff & Collaboration</h3>
+          <p class="project-detail__process-card-desc">Provided specs and assets for developer implementation of MVP</p>
+        </div>
+
+      </div>
+    </section>\
+
+    <!-- ── MVP SOLUTION ── -->
+    <section class="project-detail__mvp reveal">
+      <p class="project-detail__section-title">MVP Solution</p>
+
+      <!-- Customer App -->
+      <div class="project-detail__mvp-group">
+        <h3 class="project-detail__mvp-group-heading">
+          <span class="icon icon--person" style="width:18px;height:18px;" aria-hidden="true"></span>
+          Customer App
+        </h3>
+        <div class="project-detail__mvp-grid">
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #fff;">
+              <iframe src="https://player.vimeo.com/video/1167418114?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Discover Deals"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Discover Nearby Beauty Store</p>
+              <p class="project-detail__mvp-desc">Find local beauty supply stores based on location and relevance.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #fff;">
+              <iframe src="https://player.vimeo.com/video/1164193225?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Store Profile"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">View Local Discounts</p>
+              <p class="project-detail__mvp-desc">Browse current in-store deals and promotions in one place.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #fff;">
+              <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771867817/mvpfeature3_ktsric.jpg" alt="Trusted Review Community">
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Trusted Review Community</p>
+              <p class="project-detail__mvp-desc">Read beauty-specific reviews from a focused, reliable community.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #fff;">
+              <iframe src="https://player.vimeo.com/video/1164194494?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Saved Deals"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Point Program</p>
+              <p class="project-detail__mvp-desc">Earn and redeem points to encourage repeat visits and loyalty.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Retailer App -->
+      <div class="project-detail__mvp-group" style="background: #F6F8F8; margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding-left: var(--gutter); padding-right: var(--gutter); padding-bottom: var(--space-3xl);">
+        <h3 class="project-detail__mvp-group-heading">
+          <span class="icon icon--storefront" style="width:18px;height:18px;" aria-hidden="true"></span>
+          Retailer App
+        </h3>
+        <div class="project-detail__mvp-grid">
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #F6F8F8;">
+              <iframe src="https://player.vimeo.com/video/1164206481?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Create Deal"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Store Management</p>
+              <p class="project-detail__mvp-desc">Create and manage store profiles, reviews, and basic information.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #F6F8F8;">
+              <iframe src="https://player.vimeo.com/video/1164207493?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Analytics"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Offer Deals & Sponsored Ads</p>
+              <p class="project-detail__mvp-desc">Retailers can upload and customize promotions without staff support.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #F6F8F8;">
+              <iframe src="https://player.vimeo.com/video/1164214697?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Subscription"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Store Visit Tracking</p>
+              <p class="project-detail__mvp-desc">Track in-store visits and visitor behavior by digitizing offline data.</p>
+            </div>
+          </div>
+
+          <div class="project-detail__mvp-feature">
+            <div class="project-detail__mvp-ratio" style="background: #F6F8F8;">
+              <iframe src="https://player.vimeo.com/video/1164210915?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Store Setup"></iframe>
+            </div>
+            <div class="project-detail__mvp-text">
+              <p class="project-detail__mvp-title">Monetization</p>
+              <p class="project-detail__mvp-desc">Built revenue streams with subscription plans and sponsored ads.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── PROMOTIONAL VIDEO ── -->
+    <section class="project-detail__video reveal">
+      <p class="project-detail__section-title">Motion Storytelling</p>
+      <p class="project-detail__body project-detail__video-desc">
+        Created a motion video to recruit retailers and ensure consumers have rich, valuable content at launch.
+      </p>
+      <div style="padding:56.25% 0 0 0; position:relative;">
+        <iframe src="https://player.vimeo.com/video/1158187700?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NearBiew App Introduction"></iframe>
+      </div>
+    </section>
+
+    <!-- ── BRANDING ── -->
+    <section class="project-detail__branding reveal">
+      <p class="project-detail__section-title">Branding</p>
+
+      <!-- Top: Logo + Icon Badge -->
+      <div class="project-detail__branding-top">
+
+        <div class="project-detail__branding-col">
+          <p class="project-detail__callout-label">Logo</p>
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771873199/nearbiew-logo_tg3czx.png" alt="NearBiew logo" class="project-detail__branding-logo">
+        </div>
+
+        <div class="project-detail__branding-col">
+          <p class="project-detail__callout-label">Icon Badge (Liquid Glass)</p>
+          <div class="project-detail__branding-icons">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771873052/nearbiew-icon1_hqbonp.png" alt="App icon — dark" class="project-detail__branding-icon">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771873055/nearbiew-icon2_zmkltp.png" alt="App icon — light" class="project-detail__branding-icon">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom: Color + Typography (2 col) -->
+      <div class="project-detail__branding-bottom">
+        <div class="project-detail__branding-bottom-grid">
+
+          <!-- Left: Color (2 inner columns) -->
+          <div>
+            <p class="project-detail__callout-label">Color</p>
+
+            <div id="color-inner-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-md);">
+
+              <!-- Inner col 1: Theme Colors + Messaging -->
+              <div>
+                <p class="project-detail__branding-sublabel">Theme Colors</p>
+                <div class="project-detail__branding-palette">
+                  <div class="project-detail__branding-swatch">
+                    <span class="project-detail__branding-color" style="background: #0ABAB5;"></span>
+                    <span class="project-detail__branding-swatch-label">Primary</span>
+                  </div>
+                  <div class="project-detail__branding-swatch">
+                    <span class="project-detail__branding-color" style="background: #F75590;"></span>
+                    <span class="project-detail__branding-swatch-label">Secondary</span>
+                  </div>
+                  <div class="project-detail__branding-swatch">
+                    <span class="project-detail__branding-color" style="background: #6D55F7;"></span>
+                    <span class="project-detail__branding-swatch-label">Promotion</span>
+                  </div>
+                </div>
+
+                <p class="project-detail__branding-sublabel" style="margin-top: var(--space-xl);">Messaging</p>
+                <div class="project-detail__branding-palette">
+                  <div class="project-detail__branding-swatch">
+                    <span class="project-detail__branding-color" style="background: #17A834;"></span>
+                    <span class="project-detail__branding-swatch-label">Success</span>
+                  </div>
+                  <div class="project-detail__branding-swatch">
+                    <span class="project-detail__branding-color" style="background: #BA0A0A;"></span>
+                    <span class="project-detail__branding-swatch-label">Error</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Inner col 2: Theme Colors Scale -->
+              <div>
+                <p class="project-detail__branding-sublabel">Theme Colors Scale</p>
+                <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771873581/color-scale_lerbwv.jpg" alt="Theme color scale" class="project-detail__branding-scale-img">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Typography -->
+          <div style="display: flex; flex-direction: column; height: 500px;">
+            <p class="project-detail__callout-label">Typography</p>
+            <div style="overflow-y: auto; flex: 1; min-height: 0;">
+              <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771875134/Typography_d9cdy0.jpg" alt="Typography guide" class="project-detail__branding-scale-img" style="margin-top: 0;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+     <!-- ── OUTCOMES ── -->
+    <section class="project-detail__outcomes reveal">
+      <p class="project-detail__section-title">Why the Project Was Paused</p>
+      <div class="project-detail__outcomes-grid">
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--schedule" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">MVP timeline expanded</div>
+          <div class="project-detail__outcome-subtitle">Initial 3-month MVP grew to ~12 months due to added features and scope complexity.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--trending-up" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">AI Market shift</div>
+          <div class="project-detail__outcome-subtitle">Rapid advancement of AI-driven discovery tools reduced the long-term standalone value of the app concept.</div>
+        </div>
+
+        <div class="project-detail__outcome">
+          <span class="icon icon--flag" style="width:22px;height:22px;" aria-hidden="true"></span>
+          <div class="project-detail__outcome-title">Strategic pause</div>
+          <div class="project-detail__outcome-subtitle">The project was paused before launch to reassess feasibility and market relevance.</div>
+        </div>
+
+
+      </div>
+    </section>
+
+   <!-- ── REFLECTION ── -->
+    <section class="project-detail__text-section">
+      <div class="project-detail__text-section-inner reveal">
+        <h2 class="project-detail__section-title">Reflection</h2>
+        <p class="project-detail__body">
+          Early in the project, I prioritized visual polish over implementation speed. This experience taught me when to intentionally <strong>simplify visuals, focus on core functionality, and ship an MVP on time</strong> to validate the product.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── PROJECT NAV (auto-rendered by main.js) ── -->
+    <div id="project-nav"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <load src="/partials/footer.html" />
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
