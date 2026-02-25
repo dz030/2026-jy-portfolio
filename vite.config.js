@@ -1,8 +1,14 @@
-import { defineConfig } from 'vite';
-import injectHTML from 'vite-plugin-html-inject';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [
-    injectHTML(),
-  ],
+  base: "/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        about: "about.html",
+        projects: "projects/index.html"
+      }
+    }
+  }
 });
