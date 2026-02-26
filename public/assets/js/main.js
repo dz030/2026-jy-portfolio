@@ -181,8 +181,8 @@ if (heroEl) {
     const scrollEffectY = cachedScrollY * 0.2;
     const scrollEffectX = Math.sin(cachedScrollY * 0.005) * 6;
 
-    cX += (tX + scrollEffectX - cX) * 0.035;
-    cY += (tY + scrollEffectY - cY) * 0.035;
+    cX += (tX + scrollEffectX - cX) * 0.08;
+    cY += (tY + scrollEffectY - cY) * 0.08;
 
     heroEl.style.setProperty('--mx', cX.toFixed(1) + '%');
     heroEl.style.setProperty('--my', cY.toFixed(1) + '%');

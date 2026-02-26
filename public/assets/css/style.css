@@ -233,13 +233,13 @@ body {
     radial-gradient(ellipse 45% 45% at 
       calc(var(--mx) - 25%) 
       calc(var(--my) - 15%), 
-      #c4b5fd 0%, transparent 70%),
+      #B7A4FF 0%, transparent 70%),
 
     /* Pink: Move it 15% to the right and 10% down from the inverted position */
     radial-gradient(ellipse 40% 40% at 
       calc((100% - var(--mx)) + 25%) 
       calc((100% - var(--my)) + 15%), 
-      #fda4af 0%, transparent 70%),
+      #FF909E 0%, transparent 70%),
 
     radial-gradient(ellipse 70% 60% at 50% 50%, #f0ecff 0%, #fce8e4 55%, #ffffff 100%);
   
