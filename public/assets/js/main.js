@@ -164,47 +164,49 @@ const heroEl = document.getElementById('hero');
 
 if (heroEl) {
   let tX = 50, tY = 50, cX = 50, cY = 50;
+  let cachedScrollY = 0;
+  let heroVisible = true;
+  let heroRafId = null;
 
-  // 1. Mouse logic (Keep exactly as you had it)
   document.addEventListener('mousemove', e => {
     const r = heroEl.getBoundingClientRect();
     if (e.clientY < r.bottom) {
       tX = ((e.clientX - r.left) / r.width)  * 100;
       tY = ((e.clientY - r.top)  / r.height) * 100;
     }
-  });
+  }, { passive: true });
 
-  // 2. Mobile/Scroll logic (The new addition)
-  // This shifts the "target" Y based on scroll height
   window.addEventListener('scroll', () => {
-    // As you scroll down, tY increases, moving the circles down
-    // 0.05 is the speed; increase it for more dramatic movement
-    tY = 50 + (window.scrollY * 0.05); 
-    
-    // Optional: Make it sway side to side slightly as you scroll
-    tX = 50 + (Math.sin(window.scrollY * 0.01) * 10); 
-  });
+    cachedScrollY = window.scrollY;
+    tY = 50 + (cachedScrollY * 0.05);
+    tX = 50 + (Math.sin(cachedScrollY * 0.01) * 10);
+  }, { passive: true });
 
-  (function tick() {
-    // 1. Boost the Scroll Impact
-    // Changed 0.1 to 0.4 (4x stronger movement)
-    let scrollEffectY = scrollY * 0.4; 
-    
-    // 2. Add a horizontal drift so it doesn't just go straight down
-    let scrollEffectX = Math.sin(scrollY * 0.005) * 15;
+  // Pause the rAF loop when hero is fully out of view
+  const heroVisObs = new IntersectionObserver(entries => {
+    heroVisible = entries[0].isIntersecting;
+    if (heroVisible && !heroRafId) {
+      heroRafId = requestAnimationFrame(tick);
+    }
+  }, { rootMargin: '200px' });
+  heroVisObs.observe(heroEl);
 
-    let targetX = tX + scrollEffectX;
-    let targetY = tY + scrollEffectY; 
+  function tick() {
+    heroRafId = null;
+    if (!heroVisible) return;
 
-    // 3. Keep the easing (0.06) but you can bump to 0.1 if you want it 'snappier'
-    cX += (targetX - cX) * 0.06;
-    cY += (targetY - cY) * 0.06;
+    const scrollEffectY = cachedScrollY * 0.4;
+    const scrollEffectX = Math.sin(cachedScrollY * 0.005) * 15;
 
-    heroEl.style.setProperty('--mx', cX.toFixed(2) + '%');
-    heroEl.style.setProperty('--my', cY.toFixed(2) + '%');
-    
-    requestAnimationFrame(tick);
-  })();
+    cX += (tX + scrollEffectX - cX) * 0.06;
+    cY += (tY + scrollEffectY - cY) * 0.06;
+
+    heroEl.style.setProperty('--mx', cX.toFixed(1) + '%');
+    heroEl.style.setProperty('--my', cY.toFixed(1) + '%');
+
+    heroRafId = requestAnimationFrame(tick);
+  }
+  heroRafId = requestAnimationFrame(tick);
 }
 
 /* ── Custom cursor ── */
@@ -213,25 +215,25 @@ const cursorRing = document.getElementById('cursor-ring');
 
 if (cursorDot && cursorRing) {
   let mx = 0, my = 0, rx = 0, ry = 0;
+  // half-widths for centering: dot=3 (6px/2), ring=14 (28px/2), ring--hover=22 (44px/2)
+  let ringHalf = 14;
 
   document.addEventListener('mousemove', e => {
     mx = e.clientX;
     my = e.clientY;
-    cursorDot.style.left = mx + 'px';
-    cursorDot.style.top  = my + 'px';
-  });
+  }, { passive: true });
 
   (function cursorLoop() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
-    cursorRing.style.left = rx + 'px';
-    cursorRing.style.top  = ry + 'px';
+    cursorDot.style.transform  = `translate(${(mx - 3).toFixed(1)}px,${(my - 3).toFixed(1)}px)`;
+    cursorRing.style.transform = `translate(${(rx - ringHalf).toFixed(1)}px,${(ry - ringHalf).toFixed(1)}px)`;
     requestAnimationFrame(cursorLoop);
   })();
 
   document.querySelectorAll('a, .project-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursorRing.classList.add('cursor__ring--hover'));
-    el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor__ring--hover'));
+    el.addEventListener('mouseenter', () => { cursorRing.classList.add('cursor__ring--hover'); ringHalf = 22; });
+    el.addEventListener('mouseleave', () => { cursorRing.classList.remove('cursor__ring--hover'); ringHalf = 14; });
   });
 }
 
