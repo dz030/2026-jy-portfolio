@@ -171,11 +171,18 @@ if (heroEl) {
   let scrollThrottle = 0;
 
   function updateHero() {
+    if (!document.hidden) {
+      requestAnimationFrame(() => {
+        heroEl.style.setProperty('--mx', cX.toFixed(1) + '%');
+        heroEl.style.setProperty('--my', cY.toFixed(1) + '%');
+      });
+    }
+
     const scrollEffectY = cachedScrollY * 0.2;
     const scrollEffectX = Math.sin(cachedScrollY * 0.005) * 6;
 
-    cX += (tX + scrollEffectX - cX) * 0.08;
-    cY += (tY + scrollEffectY - cY) * 0.08;
+    cX += (tX + scrollEffectX - cX) * 0.035;
+    cY += (tY + scrollEffectY - cY) * 0.035;
 
     heroEl.style.setProperty('--mx', cX.toFixed(1) + '%');
     heroEl.style.setProperty('--my', cY.toFixed(1) + '%');
@@ -183,7 +190,7 @@ if (heroEl) {
 
   /* Mouse Movement (Throttled) */
   document.addEventListener('mousemove', e => {
-    if (Date.now() - mouseThrottle < 40) return;
+    if (Date.now() - mouseThrottle < 60) return;
     mouseThrottle = Date.now();
 
     const r = heroEl.getBoundingClientRect();
