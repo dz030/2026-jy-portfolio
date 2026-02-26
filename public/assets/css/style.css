@@ -206,6 +206,7 @@ body {
 /* ── HERO ──────────────────────────────────────────────── */
 .hero {
   /* svh = small viewport height, prevents mobile browser chrome overflow */
+  will-change: transform;
   min-height: 100svh;
   display: flex;
   flex-direction: column;

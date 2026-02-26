@@ -166,47 +166,59 @@ if (heroEl) {
   let tX = 50, tY = 50, cX = 50, cY = 50;
   let cachedScrollY = 0;
   let heroVisible = true;
-  let heroRafId = null;
 
-  document.addEventListener('mousemove', e => {
-    const r = heroEl.getBoundingClientRect();
-    if (e.clientY < r.bottom) {
-      tX = ((e.clientX - r.left) / r.width)  * 100;
-      tY = ((e.clientY - r.top)  / r.height) * 100;
-    }
-  }, { passive: true });
+  let mouseThrottle = 0;
+  let scrollThrottle = 0;
 
-  window.addEventListener('scroll', () => {
-    cachedScrollY = window.scrollY;
-    tY = 50 + (cachedScrollY * 0.05);
-    tX = 50 + (Math.sin(cachedScrollY * 0.01) * 10);
-  }, { passive: true });
+  function updateHero() {
+    const scrollEffectY = cachedScrollY * 0.2;
+    const scrollEffectX = Math.sin(cachedScrollY * 0.005) * 6;
 
-  // Pause the rAF loop when hero is fully out of view
-  const heroVisObs = new IntersectionObserver(entries => {
-    heroVisible = entries[0].isIntersecting;
-    if (heroVisible && !heroRafId) {
-      heroRafId = requestAnimationFrame(tick);
-    }
-  }, { rootMargin: '200px' });
-  heroVisObs.observe(heroEl);
-
-  function tick() {
-    heroRafId = null;
-    if (!heroVisible) return;
-
-    const scrollEffectY = cachedScrollY * 0.4;
-    const scrollEffectX = Math.sin(cachedScrollY * 0.005) * 15;
-
-    cX += (tX + scrollEffectX - cX) * 0.06;
-    cY += (tY + scrollEffectY - cY) * 0.06;
+    cX += (tX + scrollEffectX - cX) * 0.08;
+    cY += (tY + scrollEffectY - cY) * 0.08;
 
     heroEl.style.setProperty('--mx', cX.toFixed(1) + '%');
     heroEl.style.setProperty('--my', cY.toFixed(1) + '%');
-
-    heroRafId = requestAnimationFrame(tick);
   }
-  heroRafId = requestAnimationFrame(tick);
+
+  /* Mouse Movement (Throttled) */
+  document.addEventListener('mousemove', e => {
+    if (Date.now() - mouseThrottle < 40) return;
+    mouseThrottle = Date.now();
+
+    const r = heroEl.getBoundingClientRect();
+
+    if (e.clientY < r.bottom) {
+      tX = ((e.clientX - r.left) / r.width) * 100;
+      tY = ((e.clientY - r.top) / r.height) * 100;
+
+      updateHero();
+    }
+  }, { passive: true });
+
+  /* Scroll Movement (Throttled) */
+  window.addEventListener('scroll', () => {
+    if (Date.now() - scrollThrottle < 50) return;
+    scrollThrottle = Date.now();
+
+    cachedScrollY = window.scrollY;
+
+    tY = 50 + (cachedScrollY * 0.03);
+    tX = 50 + (Math.sin(cachedScrollY * 0.005) * 6);
+
+    updateHero();
+  }, { passive: true });
+
+  /* Pause updates when hero is not visible */
+  const heroVisObs = new IntersectionObserver(entries => {
+    heroVisible = entries[0].isIntersecting;
+  }, { rootMargin: '200px' });
+
+  heroVisObs.observe(heroEl);
+
+  /* Add performance hint */
+  heroEl.style.willChange = "transform";
+  heroEl.style.contain = "layout paint";
 }
 
 /* ── Custom cursor ── */
