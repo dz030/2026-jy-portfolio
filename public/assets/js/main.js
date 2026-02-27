@@ -159,6 +159,19 @@ if (navTarget) {
     .catch(() => { /* silently skip nav if fetch fails */ });
 }
 
+/* ── Hero intro orb cleanup ── *
+ * Remove orb elements after animation ends so the browser can fully
+ * release any compositing layers. For reduced-motion users they are
+ * already display:none via CSS, so animationend never fires — remove
+ * them immediately instead.                                           */
+(function cleanupIntroOrbs() {
+  const orbs = document.querySelectorAll('.hero__orb');
+  if (!orbs.length) return;
+  /* Let animationend drive cleanup for everyone — CSS handles reduced-motion
+     by slowing the animation; JS no longer removes orbs early. */
+  orbs.forEach(o => o.addEventListener('animationend', () => o.remove(), { once: true }));
+})();
+
 /* ── Hero gradient: smooth mouse follow ── */
 const heroEl = document.getElementById('hero');
 
@@ -223,9 +236,10 @@ if (heroEl) {
 
   heroVisObs.observe(heroEl);
 
-  /* Add performance hint */
-  heroEl.style.willChange = "transform";
-  heroEl.style.contain = "layout paint";
+  /* Add layout-containment hint after the orb animation has finished so we
+     don't change the hero's stacking/containment context mid-animation.
+     (will-change: transform omitted — the hero never animates its transform.) */
+  setTimeout(() => { heroEl.style.contain = "layout paint"; }, 1500);
 }
 
 /* ── Custom cursor ── */

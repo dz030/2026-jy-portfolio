@@ -243,8 +243,10 @@ body {
 
     radial-gradient(ellipse 70% 60% at 50% 50%, #f0ecff 0%, #fce8e4 55%, #ffffff 100%);
   
-  opacity: 0.55;
+  opacity: 0;
+  animation: heroGradientIn 0.4s ease 1.2s forwards;
   pointer-events: none;
+
 }
 
 /* All hero children sit above gradient */
@@ -261,7 +263,7 @@ body {
   text-transform: uppercase;
   margin-bottom: var(--space-lg);
   opacity: 0;
-  animation: fadeUp 0.6s ease 0.2s forwards;
+  animation: fadeUp 0.6s ease 0.3s forwards;
 }
 
 .hero__title {
@@ -274,7 +276,7 @@ body {
   max-width: 100%;
   word-break: break-word;
   opacity: 0;
-  animation: fadeUp 0.6s ease 0.35s forwards;
+  animation: fadeUp 0.6s ease 0.45s forwards;
 }
 
 .hero__desc {
@@ -285,7 +287,7 @@ body {
   max-width: 30rem;
   margin-bottom: var(--space-2xl);
   opacity: 0;
-  animation: fadeUp 0.6s ease 0.5s forwards;
+  animation: fadeUp 0.6s ease 0.6s forwards;
 }
 
 /* Drop forced line breaks on small screens to prevent awkward wrapping */
@@ -306,7 +308,7 @@ body {
   padding: 0.8rem 1.625rem;
   text-decoration: none;
   opacity: 0;
-  animation: fadeUp 0.6s ease 0.65s forwards;
+  animation: fadeUp 0.6s ease 0.85s forwards;
   transition: background 0.25s;
 }
 
@@ -331,7 +333,7 @@ body {
   align-items: center;
   gap: var(--space-xs);
   opacity: 0;
-  animation: fadeUp 0.6s ease 1s forwards;
+  animation: fadeUp 0.6s ease 1.7s forwards;
 }
 
 /* Hide on very short viewports where it overlaps content */
@@ -356,7 +358,7 @@ body {
   height: 100%;
   background: var(--color-ink);
   will-change: transform;
-  animation: scrollDrop 1.8s ease-in-out infinite 1.2s;
+  animation: scrollDrop 1.8s ease-in-out infinite 1.7s;
 }
 
 .hero__scroll-label {
@@ -371,6 +373,98 @@ body {
 @keyframes scrollDrop {
   0%   { transform: translateY(-100%); }
   100% { transform: translateY(100%); }
+}
+
+/* ── HERO INTRO ORB ANIMATION ─────────────────────────── */
+/* No filter:blur — only transform+opacity animate (GPU composited, zero paint cost).
+   Soft falloff is achieved with a multi-stop gradient, same as the ::before technique. */
+.hero__orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  height: 90vw;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+  transform: translate3d(-50%, -50%, 0) scale(0.1);
+  animation-fill-mode: both;
+}
+
+/* On mobile portrait, 90vw is too small — orbs barely cover the screen and
+   the percentage-based translations move them only a few pixels. Switch to
+   max(90vw, 70vh) so they're viewport-filling and the motion is obvious.  */
+@media (max-width: 768px) {
+  .hero__orb {
+    width:  max(90vw, 70vh);
+    height: max(90vw, 70vh);
+  }
+} 
+
+.hero__orb--purple {
+  background: radial-gradient(circle at center,
+    rgba(183, 164, 255, 0.9)  0%,
+    rgba(183, 164, 255, 0.55) 28%,
+    rgba(183, 164, 255, 0.18) 52%,
+    transparent 70%);
+  animation: introOrbPurple 1.3s ease-out 0.1s forwards;
+}
+
+.hero__orb--pink {
+  background: radial-gradient(circle at center,
+    rgba(255, 144, 158, 0.9)  0%,
+    rgba(255, 144, 158, 0.55) 28%,
+    rgba(255, 144, 158, 0.18) 52%,
+    transparent 70%);
+  animation: introOrbPink 1.3s ease-out 0.1s forwards;
+}
+
+@keyframes introOrbPurple {
+  0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.1); }
+  10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.25); }
+  80%  { opacity: 0.3;  transform: translate3d(-85%, -70%, 0) scale(1.35); }
+  100% { opacity: 0;    transform: translate3d(-85%, -70%, 0) scale(1.35); }
+}
+
+@keyframes introOrbPink {
+  0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.1); }
+  10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.25); }
+  80%  { opacity: 0.3;  transform: translate3d(-15%, -30%, 0) scale(1.35); }
+  100% { opacity: 0;    transform: translate3d(-15%, -30%, 0) scale(1.35); }
+}
+
+@keyframes heroGradientIn {
+  to { opacity: 0.55; }
+}
+
+/* Mobile: match desktop animation speed and start orbs at 1.5× the desktop
+   starting scale so they feel larger right from the first frame. */
+@media (max-width: 768px) {
+
+  @keyframes introOrbPurple {
+    0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.375); }
+    10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.7); }
+    80%  { opacity: 0.3;  transform: translate3d(-85%, -70%, 0) scale(1.35); }
+    100% { opacity: 0;    transform: translate3d(-85%, -70%, 0) scale(1.35); }
+  }
+
+  @keyframes introOrbPink {
+    0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.375); }
+    10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.5); }
+    80%  { opacity: 0.3;  transform: translate3d(-15%, -30%, 0) scale(1.35); }
+    100% { opacity: 0;    transform: translate3d(-15%, -30%, 0) scale(1.35); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__orb {
+    animation-duration: 1.3s !important;
+    animation-timing-function: linear !important;
+  }
 }
 
 /* ── WORK SECTION ──────────────────────────────────────── */
@@ -806,7 +900,7 @@ body {
   );
   filter: blur(48px);
   opacity: 0;
-  animation: sun-rise 5s 0.05s cubic-bezier(0.33, 0, 0.4, 1) forwards;
+  animation: sun-rise 4s 0.05s cubic-bezier(0.33, 0, 0.4, 1) forwards;
 }
 
 /* Static warm glow at the very bottom — horizon warmth that stays */
