@@ -449,14 +449,14 @@ body {
     0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.375); }
     10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.7); }
     80%  { opacity: 0.3;  transform: translate3d(-85%, -70%, 0) scale(1.35); }
-    100% { opacity: 0;    transform: translate3d(-85%, -70%, 0) scale(1.35); }
+    100% { opacity: 0.1s;    transform: translate3d(-85%, -70%, 0) scale(1.35); }
   }
 
   @keyframes introOrbPink {
     0%   { opacity: 0;    transform: translate3d(-50%, -50%, 0) scale(0.375); }
     10%  { opacity: 0.65; transform: translate3d(-50%, -50%, 0) scale(0.5); }
     80%  { opacity: 0.3;  transform: translate3d(-15%, -30%, 0) scale(1.35); }
-    100% { opacity: 0;    transform: translate3d(-15%, -30%, 0) scale(1.35); }
+    100% { opacity: 0.1;    transform: translate3d(-15%, -30%, 0) scale(1.35); }
   }
 }
 
