@@ -19,20 +19,49 @@
     const thumbInner = clone.querySelector('[data-slot="thumb-inner"]');
     if (d.thumbColor) thumbInner.classList.add(`project-card__thumb--${d.thumbColor}`);
 
-    // ── thumbnail image (shown when data-thumb-img is provided) ───────────
+   // ── thumbnail image & video (shown when data-thumb-img is provided) ───────────
     const thumbImg = clone.querySelector('[data-slot="thumb-img"]');
-    if (d.thumbImg) {
+    const thumbVideo = clone.querySelector('[data-slot="thumb-video"]');
+    let pendingVideoPlay = false;
+
+    if (d.thumbVideo) {
+      // 1. Hide the standalone image tag so we don't see both
+      if (thumbImg) thumbImg.style.display = 'none';
+
+      // 2. Set muted/playsinline properties early — required before load on mobile
+      thumbVideo.muted = true;
+      thumbVideo.loop = true;
+      thumbVideo.setAttribute('muted', '');
+      thumbVideo.setAttribute('playsinline', '');
+      thumbVideo.setAttribute('autoplay', '');
+      thumbVideo.setAttribute('loop', '');
+
+      // 3. Set the image as the "poster" (shows while loading or if video fails)
+      thumbVideo.poster = d.thumbImg;
+
+      // 4. Set the video sources (WebM first for speed, MP4 for compatibility)
+      const webmPath = d.thumbVideo.replace('.mp4', '.webm');
+      thumbVideo.innerHTML = `
+        <source src="${webmPath}" type="video/webm">
+        <source src="${d.thumbVideo}" type="video/mp4">
+      `;
+
+      // 5. Show the element (display:none prevents load on some mobile browsers)
+      thumbVideo.style.display = 'block';
+
+      // Flag so we call load()/play() after replaceWith() inserts into live DOM —
+      // mobile browsers require the element to be in the document before play() works.
+      pendingVideoPlay = true;
+
+    } else if (d.thumbImg) {
+      // FALLBACK: If there is NO video, show the image normally
       thumbImg.src = d.thumbImg;
       thumbImg.alt = d.thumbLabel || d.title || '';
-      thumbImg.style.display = '';
+      thumbImg.style.display = 'block';
+      if (thumbVideo) thumbVideo.style.display = 'none';
     }
 
-    // ── thumbnail video (shown when data-thumb-video is provided) ─────────
-    const thumbVideo = clone.querySelector('[data-slot="thumb-video"]');
-    if (d.thumbVideo) {
-      thumbVideo.src = d.thumbVideo;
-      thumbVideo.style.display = '';
-    }
+
 
     // ── thumb label (fallback text, hidden when img/video fills the space) ─
     const thumbLabel = clone.querySelector('[data-slot="thumb-label"]');
@@ -66,6 +95,20 @@
 
     // ── swap placeholder → rendered card ──────────────────────────────────
     placeholder.replaceWith(clone);
+
+    // Load and play AFTER the video element is in the live DOM —
+    // the thumbVideo reference stays valid after replaceWith().
+    if (pendingVideoPlay) {
+      thumbVideo.muted = true; // re-assert: some browsers reset on load()
+      thumbVideo.load();
+      const playPromise = thumbVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          // Blocked by Low Power Mode or browser policy — poster image stays visible.
+          console.log("Autoplay prevented:", error);
+        });
+      }
+    }
   });
 })();
 
