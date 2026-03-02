@@ -33,7 +33,7 @@
       thumbVideo.loop = true;
       thumbVideo.setAttribute('muted', '');
       thumbVideo.setAttribute('playsinline', '');
-      thumbVideo.setAttribute('autoplay', '');
+      thumbVideo.removeAttribute('autoplay'); // scroll observer drives play/pause instead
       thumbVideo.setAttribute('loop', '');
 
       // 3. Set the image as the "poster" (shows while loading or if video fails)
@@ -96,20 +96,33 @@
     // ── swap placeholder → rendered card ──────────────────────────────────
     placeholder.replaceWith(clone);
 
-    // Load and play AFTER the video element is in the live DOM —
-    // the thumbVideo reference stays valid after replaceWith().
+    // Load (but don't play) AFTER the video element is in the live DOM —
+    // the scroll observer below drives play/pause.
     if (pendingVideoPlay) {
       thumbVideo.muted = true; // re-assert: some browsers reset on load()
       thumbVideo.load();
-      const playPromise = thumbVideo.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          // Blocked by Low Power Mode or browser policy — poster image stays visible.
-          console.log("Autoplay prevented:", error);
-        });
-      }
     }
   });
+})();
+
+/* ── Thumbnail videos: play on scroll into view, pause when out ── */
+(function initThumbVideoScroll() {
+  const thumbVideos = [...document.querySelectorAll('[data-slot="thumb-video"]')]
+    .filter(v => v.style.display !== 'none');
+  if (!thumbVideos.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const v = entry.target;
+      if (entry.isIntersecting) {
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  thumbVideos.forEach(v => obs.observe(v));
 })();
 
 /* ── Project prev/next nav (data sourced from index.html project cards) ── */
@@ -411,7 +424,7 @@ document.querySelectorAll('.project-detail__outcomes').forEach(section => {
 });
 
 /* ── Vimeo scroll-play: play when visible, pause when not ── */
-const mvpIframes = document.querySelectorAll('.project-detail__mvp-ratio iframe, .project-detail__split-img--has-video iframe');
+const mvpIframes = document.querySelectorAll('.project-detail__mvp-ratio iframe, .project-detail__split-img--has-video iframe, .project-detail__video iframe');
 
 if (mvpIframes.length > 0) {
   const vimeoScript = document.createElement('script');
