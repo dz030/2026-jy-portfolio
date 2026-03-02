@@ -111,18 +111,29 @@
     .filter(v => v.style.display !== 'none');
   if (!thumbVideos.length) return;
 
+  const visible = new Set();
+
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const v = entry.target;
       if (entry.isIntersecting) {
+        visible.add(v);
         v.play().catch(() => {});
       } else {
+        visible.delete(v);
         v.pause();
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.1 });
 
-  thumbVideos.forEach(v => obs.observe(v));
+  thumbVideos.forEach(v => {
+    // Retry play once data is ready — handles the race where the observer
+    // fires before the video has buffered enough to play (common on mobile).
+    v.addEventListener('loadeddata', () => {
+      if (visible.has(v)) v.play().catch(() => {});
+    }, { once: true });
+    obs.observe(v);
+  });
 })();
 
 /* ── Project prev/next nav (data sourced from index.html project cards) ── */
