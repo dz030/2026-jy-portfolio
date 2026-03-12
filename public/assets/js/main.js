@@ -1,3 +1,8 @@
+// Vercel Analytics
+import { inject } from "@vercel/analytics";
+
+inject();
+
 /* ── Project card template renderer ────────────────────────────────────── *
  * Finds every [data-card] placeholder, clones the #project-card-template,  *
  * fills in the slots from data-* attributes, then swaps the placeholder.   *
