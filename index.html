@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jeeyoung Min — Designer</title>
   <link rel="stylesheet" href="/assets/css/style.css"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_ID%"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // This automatically tracks the page view on load
+    gtag('config', '%VITE_GA_ID%');
+  </script>
 </head>
 <body>
 
@@ -212,48 +222,6 @@
     </div>
   </section>
 
-  <!-- ABOUT
-  <section id="about" class="about">
-    <div class="reveal">
-      <p class="about__eyebrow">About Me</p>
-      <h2 class="about__headline">
-        Hi, I'm Jeeyoung —<br>
-        I make complex things<br>
-        feel simple.
-      </h2>
-      <p class="about__body">
-        With 6+ years of experience across B2B, DTC, and internal systems,
-        I turn complicated workflows into interfaces people actually enjoy using.
-        I care about craft, clarity, and making things that work beautifully.
-      </p>
-      <a href="mailto:minneymin333@gmail.com" class="about__link">
-        Get in touch
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-    <div class="about__stats reveal reveal--delay-2">
-      <div class="stat">
-        <div class="stat__value">6+</div>
-        <div class="stat__label">Years of experience</div>
-      </div>
-      <div class="stat">
-        <div class="stat__value">40+</div>
-        <div class="stat__label">Projects shipped</div>
-      </div>
-      <div class="stat">
-        <div class="stat__value">B2B</div>
-        <div class="stat__label">Enterprise &amp; wholesale</div>
-      </div>
-      <div class="stat">
-        <div class="stat__value">DTC</div>
-        <div class="stat__label">Consumer &amp; retail</div>
-      </div>
-    </div>
-  </section>-->
-
-  <!-- FOOTER -->
    <load src="/partials/footer.html" />
 
 
