@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
+        privacy: resolve(__dirname, "privacy-policy.html"),
 
         aiMotionGraphic: resolve(__dirname, "projects/ai-driven/ai-motion-graphic.html"),
         influencerTool: resolve(__dirname, "projects/ai-driven/influencer-tool.html"),
