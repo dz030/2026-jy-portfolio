@@ -15,6 +15,14 @@
     // ── href ──────────────────────────────────────────────────────────────
     card.setAttribute('href', d.href || '#');
 
+    // GA4 page path tracker
+    card.onclick = function() {
+      gtag('event', 'page_view', {
+        'page_path': d.href,
+        'page_title': d.title
+      });
+    };
+
     // ── thumb colour class ────────────────────────────────────────────────
     const thumbInner = clone.querySelector('[data-slot="thumb-inner"]');
     if (d.thumbColor) thumbInner.classList.add(`project-card__thumb--${d.thumbColor}`);
