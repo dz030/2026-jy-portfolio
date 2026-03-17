@@ -19,8 +19,8 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
 <load src="/partials/header.html" />
@@ -61,8 +61,10 @@
     </a>
   </template>
 
+  <main id="main-content">
+
   <!-- HERO -->
-  <section id="hero" class="hero">
+  <section id="hero" class="hero" aria-label="Introduction">
     <div class="hero__orb hero__orb--purple" aria-hidden="true"></div>
     <div class="hero__orb hero__orb--pink" aria-hidden="true"></div>
     <p class="hero__label">Product &amp; UX Designer</p>
@@ -77,7 +79,7 @@
       </svg>
     </a>
 
-    <div class="hero__scroll">
+    <div class="hero__scroll" aria-hidden="true">
   <div class="hero__scroll-bar"></div>
   <span class="hero__scroll-label">Scroll</span>
 </div>
@@ -218,6 +220,8 @@
 
     </div>
   </section>
+
+  </main>
 
    <load src="/partials/footer.html" />
 

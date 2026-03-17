@@ -9,14 +9,14 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
   <!-- PROJECT DETAIL -->
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
 
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
@@ -53,7 +53,7 @@
         </picture>
         <a href="https://jy-marketing-tool.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-detail__live-btn">
           <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-          Try App (Demo)
+          Try App (Demo)<span class="sr-only"> (opens in new tab)</span>
         </a>
       </div>
     </div>
@@ -85,7 +85,7 @@
             <p class="project-detail__sidebar-value">Live</p>
             <a href="https://jy-marketing-tool.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-detail__sidebar-live-btn">
               <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-              Try App (Demo)
+              Try App (Demo)<span class="sr-only"> (opens in new tab)</span>
             </a>
           </div>
         </div>
@@ -94,7 +94,7 @@
 
     <!-- ── THE PROBLEM ── -->
     <section class="project-detail__callout reveal">
-      <p class="project-detail__section-title">The Problem</p>
+      <h2 class="project-detail__section-title">The Problem</h2>
       <p class="project-detail__callout-text">
         Spreadsheet Fatigue & Overpriced Tools
       </p>
@@ -112,7 +112,7 @@
 
        <!-- ── RESEARCH ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Research: Define MVP</p>
+      <h2 class="project-detail__section-title">Research: Define MVP</h2>
       <p class="project-detail__callout-text__body">I met with the marketing team and gathered core needs:</p>
       <div class="project-detail__outcomes-grid">
 
@@ -140,7 +140,7 @@
 
      <!-- ── PROCESS STEPS ── -->
     <section class="project-detail__process reveal">
-      <p class="project-detail__section-title">Vibe Coded Process: Rapid MVP Build</p>
+      <h2 class="project-detail__section-title">Vibe Coded Process: Rapid MVP Build</h2>
       <div class="project-detail__process-steps">
 
         <div class="project-detail__step">
@@ -193,7 +193,7 @@
 
         <!-- ── SPLIT: TEXT + IMAGE ── -->
     <section class="project-detail__features project-detail__features--no-dividers reveal">
-      <p class="project-detail__section-title">MVP Solution</p>
+      <h2 class="project-detail__section-title">MVP Solution</h2>
 
       <div class="project-detail__split reveal">
         <div class="project-detail__split-img project-detail__split-img--has-video" style="background:#fff;">
@@ -245,7 +245,7 @@
 
         <!-- ── OUTCOMES ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Outcomes</p>
+      <h2 class="project-detail__section-title">Outcomes</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -289,7 +289,7 @@
         <h2 class="project-detail__section-title">Reflection</h2>
         <p class="project-detail__body">
           This project reinforced the value of building focused, low-complexity tools that solve specific workflow problems. Working under a tight timeline emphasized prioritizing core functionality over polish to deliver impact quickly.
-        </p>
+        </h2>
       </div>
     </section>
 

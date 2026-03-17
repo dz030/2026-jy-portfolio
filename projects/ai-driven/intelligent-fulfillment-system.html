@@ -9,14 +9,14 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
   <!-- PROJECT DETAIL -->
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
 
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
@@ -84,7 +84,7 @@
 
     <!-- ── THE PROBLEM ── -->
     <section class="project-detail__callout reveal">
-      <p class="project-detail__section-title">The Problem</p>
+      <h2 class="project-detail__section-title">The Problem</h2>
       <p class="project-detail__callout-text">
         Repetitive, Manual Tasks
       </p>
@@ -99,7 +99,7 @@
 
          <!-- ── THE GOAL ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">The Goal</p>
+      <h2 class="project-detail__section-title">The Goal</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -126,7 +126,7 @@
 
      <!-- ── PROCESS STEPS ── -->
     <section class="project-detail__process reveal">
-      <p class="project-detail__section-title">Process</p>
+      <h2 class="project-detail__section-title">Process</h2>
       <div class="project-detail__process-steps">
 
         <div class="project-detail__step">
@@ -170,7 +170,7 @@
 
         <!-- ── SOLUTION ── -->
     <section class="project-detail__solution reveal">
-      <p class="project-detail__section-title">Solution</p>
+      <h2 class="project-detail__section-title">Solution</h2>
 
       <!-- BEFORE -->
       <div class="project-detail__workflow">
@@ -371,7 +371,7 @@
 
         <!-- ── OUTCOMES ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Outcomes</p>
+      <h2 class="project-detail__section-title">Outcomes</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -415,7 +415,7 @@
         <h2 class="project-detail__section-title">Reflection</h2>
         <p class="project-detail__body">
           Learned to balance system intelligence with practical implementation constraints under tight timelines. Clear cross-platform workflow alignment is essential when designing automation in operational environments.
-        </p>
+        </h2>
       </div>
     </section>
 

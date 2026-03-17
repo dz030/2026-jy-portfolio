@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
 
@@ -23,20 +23,20 @@
         <h1 class="project-detail__callout-text">Privacy & Analytics Policy</h1>
          <p class="sol-panel__desc">Last updated: March 2026</p><br><br>
 
-        <h3 class="sol-panel__title">How I use data</h3>
+        <h2 class="sol-panel__title">How I use data</h2>
         <p class="sol-panel__desc">
           This portfolio website uses Google Analytics to analyze traffic patterns. This helps me understand which of my design projects are most interesting to visitors and improve the overall user experience.
         </p>
         <br>
-        <h3 class="sol-panel__title">Data Collected</h3>
+        <h2 class="sol-panel__title">Data Collected</h2>
         <p class="sol-panel__desc">
           The analytics data collected is anonymized and includes information such as your browser type, the pages you visit, and the duration of your stay. <strong>I do not collect personal identifying information</strong> such as your name, email address, or phone number.
         </p>
         <br>
-        <h3 class="sol-panel__title">Your Control</h3>
+        <h2 class="sol-panel__title">Your Control</h2>
         <p class="sol-panel__desc">
           You have the right to opt-out of Google Analytics tracking. You can do this by installing the 
-          <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Google Analytics Opt-out Browser Add-on</a>.
+          <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Google Analytics Opt-out Browser Add-on<span class="sr-only"> (opens in new tab)</span></a>.
         </p>
         
       </div>

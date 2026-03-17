@@ -9,14 +9,14 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
   <!-- PROJECT DETAIL -->
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
 
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
@@ -97,7 +97,7 @@
 
     <!-- ── THE PROBLEM ── -->
     <section class="project-detail__callout reveal">
-      <p class="project-detail__section-title">The Problem</p>
+      <h2 class="project-detail__section-title">The Problem</h2>
       <section class="project-detail__text-cols">
         <div class="project-detail__text-col">
           <h3 class="project-detail__text-col-heading">
@@ -158,7 +158,7 @@
 
         <!-- ── MY ROLE ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">My Role</p>
+      <h2 class="project-detail__section-title">My Role</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -185,7 +185,7 @@
 
     <!-- ── PROCESS ── -->
     <section class="project-detail__process">
-      <p class="project-detail__section-title reveal">Process</p>
+      <h2 class="project-detail__section-title reveal">Process</h2>
       <div class="project-detail__process-cards">
 
         <!-- Step 1 -->
@@ -253,7 +253,7 @@
 
     <!-- ── MVP SOLUTION ── -->
     <section class="project-detail__mvp reveal">
-      <p class="project-detail__section-title">MVP Solution</p>
+      <h2 class="project-detail__section-title">MVP Solution</h2>
 
       <!-- Customer App -->
       <div class="project-detail__mvp-group">
@@ -361,7 +361,7 @@
 
     <!-- ── PROMOTIONAL VIDEO ── -->
     <section class="project-detail__video reveal">
-      <p class="project-detail__section-title">Motion Storytelling</p>
+      <h2 class="project-detail__section-title">Motion Storytelling</h2>
       <p class="project-detail__body project-detail__video-desc">
         Created a motion video to recruit retailers and ensure consumers have rich, valuable content at launch.
       </p>
@@ -372,7 +372,7 @@
 
     <!-- ── BRANDING ── -->
     <section class="project-detail__branding reveal">
-      <p class="project-detail__section-title">Branding</p>
+      <h2 class="project-detail__section-title">Branding</h2>
 
       <!-- Top: Logo + Icon Badge -->
       <div class="project-detail__branding-top">
@@ -458,7 +458,7 @@
 
      <!-- ── OUTCOMES ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Why the Project Was Paused</p>
+      <h2 class="project-detail__section-title">Why the Project Was Paused</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -489,7 +489,7 @@
         <h2 class="project-detail__section-title">Reflection</h2>
         <p class="project-detail__body">
           Early in the project, I prioritized visual polish over implementation speed. This experience taught me when to intentionally <strong>simplify visuals, focus on core functionality, and ship an MVP on time</strong> to validate the product.
-        </p>
+        </h2>
       </div>
     </section>
 

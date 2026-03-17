@@ -7,7 +7,18 @@
       "Bash(sudo chown:*)",
       "Bash(pkill:*)",
       "Bash(lsof:*)",
-      "Bash(xargs kill:*)"
+      "Bash(xargs kill:*)",
+      "Bash(python3:*)",
+      "Bash(__NEW_LINE_4196fc1e3985e6ea__ echo \"=== 1. focus-visible + sr-only in CSS ===\")",
+      "Bash(__NEW_LINE_4196fc1e3985e6ea__ echo \"=== 2. Skip link in header ===\")",
+      "Bash(__NEW_LINE_4196fc1e3985e6ea__ echo \"=== 3. index.html: main + cursor aria-hidden + hero aria-label + scroll aria-hidden ===\")",
+      "Bash(__NEW_LINE_4196fc1e3985e6ea__ echo \"=== 4. about.html: main + cursor aria-hidden + YouTube aria-label ===\")",
+      "Bash(__NEW_LINE_a3e694dad16fcbf2__ echo \"=== 5. main.js: reduced-motion + tabindex + nav aria-label ===\")",
+      "Bash(__NEW_LINE_a3e694dad16fcbf2__ echo \"=== 6. Project pages: id=main-content count ===\")",
+      "Bash(grep:*)",
+      "Bash(__NEW_LINE_ba3387b485b84fcc__ echo \"=== 7. h2 section titles \\(was p tags\\) ===\")",
+      "Bash(__NEW_LINE_ba3387b485b84fcc__ echo \"=== 8. sr-only \\(opens in new tab\\) in external links ===\")",
+      "Bash(__NEW_LINE_ba3387b485b84fcc__ echo \"=== 9. Footer LinkedIn rel=noopener ===\")"
     ]
   }
 }

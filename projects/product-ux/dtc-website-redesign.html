@@ -9,14 +9,14 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
   <!-- PROJECT DETAIL -->
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
 
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
@@ -51,7 +51,7 @@
         </picture>
         <a href="https://iwellus.com" target="_blank" rel="noopener noreferrer" class="project-detail__live-btn">
           <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-          View live site
+          View live site<span class="sr-only"> (opens in new tab)</span>
         </a>
       </div>
     </div>
@@ -82,7 +82,7 @@
             <p class="project-detail__sidebar-value">Launched</p>
             <a href="https://iwellus.com" target="_blank" rel="noopener noreferrer" class="project-detail__sidebar-live-btn">
               <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-              View live site
+              View live site<span class="sr-only"> (opens in new tab)</span>
             </a>
           </div>
         </div>
@@ -91,7 +91,7 @@
 
     <!-- ── THE PROBLEM ── -->
     <section class="project-detail__callout reveal">
-      <p class="project-detail__section-title">The Problem</p>
+      <h2 class="project-detail__section-title">The Problem</h2>
       <p class="project-detail__callout-text">
         Hard-to-Maintain Sites, Poor Customer Discovery
       </p>
@@ -105,7 +105,7 @@
 
         <!-- ── THE SOLUTION ── -->
     <section class="project-detail__solution reveal">
-      <p class="project-detail__section-title">The Solution</p>
+      <h2 class="project-detail__section-title">The Solution</h2>
 
       <!-- Tab bar -->
       <div class="sol-tabs" role="tablist" aria-label="Solution features">
@@ -274,7 +274,7 @@
 
     <!-- ── PROCESS ── -->
     <section class="project-detail__process">
-      <p class="project-detail__section-title reveal">Process</p>
+      <h2 class="project-detail__section-title reveal">Process</h2>
       <div class="project-detail__process-cards">
 
         <!-- Step 1 -->
@@ -344,7 +344,7 @@
 
         <!-- ── IMAGE GRID (2-up) ── -->
     <section class="project-detail__process">
-      <p class="project-detail__section-title reveal">Rebranding</p>
+      <h2 class="project-detail__section-title reveal">Rebranding</h2>
     <div class="project-detail__img-grid reveal">
       <div class="project-detail__img-grid-item">
         <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771778748/guideline_1_wnpr4t.jpg" alt="Before — Homepage" class="project-detail__grid-img">
@@ -357,7 +357,7 @@
 
     <!-- ── OUTCOMES ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Outcomes</p>
+      <h2 class="project-detail__section-title">Outcomes</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -414,7 +414,7 @@
         <h2 class="project-detail__section-title">Reflection</h2>
         <p class="project-detail__body">
           This project taught me how to design <strong>scalable multi-brand experiences</strong> and improve efficiency for small teams. Next time, I’d integrate user testing and analytics earlier to further optimize the customer journey.
-        </p>
+        </h2>
       </div>
     </section>
 

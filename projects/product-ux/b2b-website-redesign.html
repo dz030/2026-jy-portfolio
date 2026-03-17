@@ -9,14 +9,14 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
 
   <!-- PROJECT DETAIL -->
-  <main class="project-detail">
+  <main class="project-detail" id="main-content">
 
     <!-- ── BACK LINK ── -->
     <load src="/partials/back-link.html" />
@@ -48,7 +48,7 @@
         </picture>
         <a href="https://iwelluswholesale.com" target="_blank" rel="noopener noreferrer" class="project-detail__live-btn">
           <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-          View live site
+          View live site<span class="sr-only"> (opens in new tab)</span>
         </a>
       </div>
     </div>
@@ -79,7 +79,7 @@
             <p class="project-detail__sidebar-value">Launched</p>
             <a href="https://iwelluswholesale.com" target="_blank" rel="noopener noreferrer" class="project-detail__sidebar-live-btn">
               <span class="icon icon--arrow-outward" style="width:10px;height:10px;" aria-hidden="true"></span>
-              View live site
+              View live site<span class="sr-only"> (opens in new tab)</span>
             </a>
           </div>
         </div>
@@ -88,7 +88,7 @@
 
     <!-- ── THE PROBLEM ── -->
     <section class="project-detail__callout reveal">
-      <p class="project-detail__section-title">The Problem</p>
+      <h2 class="project-detail__section-title">The Problem</h2>
       <p class="project-detail__callout-text">
         The business needed a scalable B2B website that could:
       </p>
@@ -104,7 +104,7 @@
 
     <!-- ── PROCESS ── -->
     <section class="project-detail__process">
-      <p class="project-detail__section-title reveal">Process</p>
+      <h2 class="project-detail__section-title reveal">Process</h2>
       <div class="project-detail__process-cards">
 
         <!-- Step 1 -->
@@ -161,7 +161,7 @@
 
         <!-- ── THE SOLUTION ── -->
     <section class="project-detail__solution reveal">
-      <p class="project-detail__section-title">The Solution</p>
+      <h2 class="project-detail__section-title">The Solution</h2>
 
       <!-- Tab bar -->
       <div class="sol-tabs" role="tablist" aria-label="Solution features">
@@ -315,7 +315,7 @@
 
     <!-- ── OUTCOMES ── -->
     <section class="project-detail__outcomes reveal">
-      <p class="project-detail__section-title">Outcomes (Year-over-Year)</p>
+      <h2 class="project-detail__section-title">Outcomes (Year-over-Year)</h2>
       <div class="project-detail__outcomes-grid">
 
         <div class="project-detail__outcome">
@@ -371,7 +371,7 @@
         <h2 class="project-detail__section-title">Reflection</h2>
         <p class="project-detail__body">
           This project taught me how to design and ship under real-world constraints by balancing speed, functionality, and visual quality. Designing directly within Shopify reinforced the importance of aligning UX decisions with implementation feasibility to drive measurable business outcomes.
-        </p>
+        </h2>
       </div>
     </section>
 

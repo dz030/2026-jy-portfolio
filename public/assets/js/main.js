@@ -226,7 +226,7 @@ if (navTarget) {
         </a>`;
       }
 
-      navTarget.innerHTML = `<nav class="project-detail__project-nav">
+      navTarget.innerHTML = `<nav class="project-detail__project-nav" aria-label="Project navigation">
         ${prev ? prevHTML(prev) : '<div class="project-detail__project-nav-prev project-detail__project-nav-prev--empty"></div>'}
         ${next ? nextHTML(next) : '<div class="project-detail__project-nav-next project-detail__project-nav-next--empty"></div>'}
       </nav>`;
@@ -377,15 +377,22 @@ if (solTabStrip) {
     }
   });
 
-  const solTabs   = document.querySelectorAll('.sol-tab');
+  const solTabs   = [...document.querySelectorAll('.sol-tab')];
   const solPanels = document.querySelectorAll('.sol-panel');
 
   function activateTab(tab) {
     const target = tab.dataset.tab;
-    solTabs.forEach(t   => { t.classList.remove('sol-tab--active'); t.setAttribute('aria-selected', 'false'); });
+    // Update all tabs: deselect + remove from tab order
+    solTabs.forEach(t => {
+      t.classList.remove('sol-tab--active');
+      t.setAttribute('aria-selected', 'false');
+      t.setAttribute('tabindex', '-1');
+    });
     solPanels.forEach(p => p.classList.remove('sol-panel--active'));
+    // Activate selected tab
     tab.classList.add('sol-tab--active');
     tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
     document.getElementById('sol-panel-' + target).classList.add('sol-panel--active');
 
     // Scroll strip so active tab is centered
@@ -395,7 +402,27 @@ if (solTabStrip) {
     solTabStrip.scrollBy({ left: offset, behavior: 'smooth' });
   }
 
+  // Initialize tabindex: only the active tab is in the tab order
+  solTabs.forEach(tab => {
+    tab.setAttribute('tabindex', tab.getAttribute('aria-selected') === 'true' ? '0' : '-1');
+  });
+
   solTabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+
+  // Arrow key navigation (ARIA tab pattern: Left/Right/Home/End)
+  solTabStrip.addEventListener('keydown', e => {
+    const current = solTabs.indexOf(document.activeElement);
+    if (current === -1) return;
+    let next;
+    if      (e.key === 'ArrowRight') { next = (current + 1) % solTabs.length; }
+    else if (e.key === 'ArrowLeft')  { next = (current - 1 + solTabs.length) % solTabs.length; }
+    else if (e.key === 'Home')       { next = 0; }
+    else if (e.key === 'End')        { next = solTabs.length - 1; }
+    else return;
+    e.preventDefault();
+    activateTab(solTabs[next]);
+    solTabs[next].focus();
+  });
 }
 
 /* ── Outcome counter + arrow animation ── */

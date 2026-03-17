@@ -9,11 +9,13 @@
 <body>
 
   <!-- CURSOR -->
-  <div id="cursor-dot" class="cursor__dot"></div>
-  <div id="cursor-ring" class="cursor__ring"></div>
+  <div id="cursor-dot" class="cursor__dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor__ring" aria-hidden="true"></div>
 
   <!-- NAV -->
   <load src="/partials/header.html" />
+
+  <main id="main-content">
 
   <!-- ABOUT HERO -->
   <section class="about-page__hero">
@@ -33,34 +35,34 @@
   <section class="about-journey">
     <p class="about-journey__label reveal">My Design Path & Identity</p>
 
-    <div class="about-journey__track reveal reveal--delay-1">
+    <div class="about-journey__track reveal reveal--delay-1" role="list">
 
-      <!-- Full-span connecting line -->
-      <div class="about-journey__line"></div>
+      <!-- Full-span connecting line (decorative) -->
+      <div class="about-journey__line" aria-hidden="true"></div>
 
       <!-- Node 1: Marketing Graphic Designer -->
-      <div class="about-journey__node about-journey__node--active">
-        <div class="about-journey__dot"></div>
+      <div class="about-journey__node about-journey__node--active" role="listitem">
+        <div class="about-journey__dot" aria-hidden="true"></div>
         <span class="about-journey__node-title">Marketing<br>Graphic Designer</span>
         <span class="about-journey__node-sub">Brand assets,<br>print &amp; campaign visuals</span>
       </div>
 
       <!-- Node 2: Web Designer -->
-      <div class="about-journey__node about-journey__node--active">
-        <div class="about-journey__dot"></div>
+      <div class="about-journey__node about-journey__node--active" role="listitem">
+        <div class="about-journey__dot" aria-hidden="true"></div>
         <span class="about-journey__node-title">Web Designer</span>
         <span class="about-journey__node-sub">Landing pages,<br>banners &amp; digital UI</span>
       </div>
 
       <!-- Node 3: UX/UI Designer -->
-      <div class="about-journey__node about-journey__node--current">
-        <div class="about-journey__dot"></div>
+      <div class="about-journey__node about-journey__node--current" role="listitem">
+        <div class="about-journey__dot" aria-hidden="true"></div>
         <span class="about-journey__node-title">UX / UI Designer</span>
         <span class="about-journey__node-sub">End-to-end product<br>design &amp; prototyping</span>
       </div>
 
-      <!-- "I'm here!" badge between UX/UI and Product Designer -->
-      <div class="about-journey__here">
+      <!-- "I'm here!" badge (decorative position indicator) -->
+      <div class="about-journey__here" aria-hidden="true">
         <svg class="about-journey__here-arrow" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 5 L11 5 M7 1 L12 5 L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -68,8 +70,8 @@
       </div>
 
       <!-- Node 4: Product Designer (current target) -->
-      <div class="about-journey__node about-journey__node--current">
-        <div class="about-journey__dot"></div>
+      <div class="about-journey__node about-journey__node--current" role="listitem">
+        <div class="about-journey__dot" aria-hidden="true"></div>
         <span class="about-journey__node-title">Product Designer</span>
         <span class="about-journey__node-sub">Systems thinking,<br>cross-functional leadership</span>
       </div>
@@ -86,14 +88,14 @@
       <!-- Photo collage: 1 tall left + 2 stacked right -->
       <div class="about-page__photos reveal">
         <div class="about-page__photo about-page__photo--main">
-          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy1_ee0msi.jpg" alt="Photo 1" class="about-page__photo-img">
+          <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy1_ee0msi.jpg" alt="Jeeyoung Min" class="about-page__photo-img">
         </div>
         <div class="about-page__photo-stack">
           <div class="about-page__photo about-page__photo--sm">
-            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy2_dravbo.jpg" alt="Photo 2" class="about-page__photo-img">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy2_dravbo.jpg" alt="Jeeyoung Min" class="about-page__photo-img">
           </div>
           <div class="about-page__photo about-page__photo--sm">
-            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy3_mdgx47.jpg" alt="Photo 3" class="about-page__photo-img">
+            <img src="https://res.cloudinary.com/dluuq2twb/image/upload/v1771647341/jy3_mdgx47.jpg" alt="Jeeyoung Min" class="about-page__photo-img">
           </div>
         </div>
       </div>
@@ -125,7 +127,7 @@
         </p>
 
         <!-- YOUTUBE CHANNEL -->
-  <section class="about-yt">
+  <section class="about-yt" aria-label="YouTube channel">
 
     <!-- Channel image (circular) -->
     <div class="about-yt__img-wrap reveal">
@@ -150,7 +152,7 @@
 
       <div class="about-yt__meta">
         <div>
-          <span class="about-yt__subs-count">4.60K</span>
+          <span class="about-yt__subs-count">4.66K</span>
           <span class="about-yt__subs-label">subscribers</span>
         </div>
       </div>
@@ -165,7 +167,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/>
         </svg>
-        Browse our channel
+        Browse our channel<span class="sr-only"> (opens in new tab)</span>
       </a>
     </div>
 
@@ -178,6 +180,8 @@
   </section>
 
   
+
+  </main>
 
   <!-- FOOTER -->
   <load src="/partials/footer.html" />
