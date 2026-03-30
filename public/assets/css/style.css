@@ -2286,7 +2286,7 @@ ul.project-detail__outcome-subtitle li {
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background: var(--color-badge);
+  background: var(--color-badge2);
   color: #fff;
   padding: 3px 8px;
   flex-shrink: 0;
